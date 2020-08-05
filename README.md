@@ -1,29 +1,26 @@
-# FE Brazil Vue Componets
+# Repositório base para FE
 
-[![Build Status](https://img.shields.io/bitbucket/pipelines/gustavobpereira/fe-brazil.svg)]()
 
-This repo will contain all vueJs components created by the brazzilian FE team.
+Olá este é o repositório base para o teste de front end da Valtech Brasil.
+Caso tenha alguma dúvida, entre em contato com [@joao-olivio](https://github.com/joao-olivio) ou [@jaqcard](https://github.com/jackiecard).
 
-# Rules
-
-  - Every new feature development should have it's own branch feature/<feature-name>
-  - All commits should be clear, and reflect the changes made
-  - Pull request must be approved by at least 2 users before merge on master.
+# Pré requisitos
+  - Node v10.18.6 (preferencialmente)
 
 ### Installation
 
-Vue Componets requires [Node.js](https://nodejs.org/) v4+ to run.
-
-Install the dependencies and devDependencies and start the server.
-
 ```sh
-$ cd fe-brazil
+$ cd <entrevista-fe>
 $ npm install 
-$ npm develop
+$ npm run develop
 ```
 
 ### Development
 
-Want to contribute? Great!
+Com os passo acima, ao entrar no endereço http://localhost:3000 o fractal deve estar sendo executado.
 
-Follow the rules, remember that we're a team, this won't be only used by you!
+# Referencias
+  - Vue - https://vuejs.org/
+  - Fractal - http://fractal.build/
+  - Atomic Design - https://bradfrost.com/blog/post/atomic-web-design/
+  - Acessibilidade - https://www.w3.org/WAI/standards-guidelines/aria/
