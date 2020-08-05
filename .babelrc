@@ -1,0 +1,8 @@
+{
+  "presets": ["es2015"],
+  "plugins": [
+    "transform-object-assign",
+    "es6-promise",
+    "transform-object-rest-spread"
+  ]
+}

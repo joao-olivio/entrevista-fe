@@ -1,0 +1,16 @@
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: $light-grey;
+  font-family: 'Roboto', sans-serif;
+
+  #main-container {
+    opacity: 0;
+  }
+
+  &.page-loaded {
+    #main-container {
+      opacity: 1;
+    }
+  }
+}

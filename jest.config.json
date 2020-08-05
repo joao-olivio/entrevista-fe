@@ -1,0 +1,42 @@
+{
+  "testMatch": [
+    "**/**/*.spec.js"
+  ],
+  "collectCoverageFrom": [
+    "src/**/*.js",
+    "src/**/*.vue",
+    "!src/**/entry.js",
+    "!src/**/index.js",
+    "!<rootDir>/node_modules/"
+  ],
+  "moduleFileExtensions": [
+    "js",
+    "vue"
+  ],
+  "moduleNameMapper": {
+    "^vue$": "vue/dist/vue.common.js"
+  },
+  "setupFiles": [
+    "<rootDir>/tasks/jest/polyfill.request-animation-frame.js",
+    "<rootDir>/tasks/jest/polyfill.matchMedia.js"
+  ],
+  "setupTestFrameworkScriptFile": "./setup-jasmine-env.js",
+  "snapshotSerializers": [
+    "jest-serializer-html"
+  ],
+  "unmockedModulePathPatterns": [
+    "./node_modules/jasmine-reporters"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 0,
+      "functions": 0,
+      "lines": 0,
+      "statements": 0
+    }
+  },
+  "transform": {
+    "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+    ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor"
+  }
+}

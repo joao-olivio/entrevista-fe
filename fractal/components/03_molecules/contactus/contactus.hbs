@@ -1,0 +1,27 @@
+<section class="section section-form">
+    <h2>Contact Us:</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus scelerisque tristique. Maecenas vitae lacinia massa.</p>
+
+    <contactus
+	    :form-fields="{{json form}}"
+	    submit-url="{{submitUrl}}"
+	    submit-button-text="{{submitButtonText}}">
+
+	    <!-- a11y form start -->
+    	<form class="form" action="{{submitUrl}}" method="GET">
+		    <span role="alert" class="message info" id="alert-message">Alert: Javascript is not supported. This is a fallback form, activate javascript for a better experience.</span>
+		    <br>
+    		<label for="{{form.name.name}}">{{form.name.label}}</label>
+			<input id="{{form.name.name}}" type="text" name="{{form.name.name}}" placeholder="{{form.name.placeholder}}" required="true" pattern="[a-zA-z]+" class="required-field">
+    		<br>
+    		<label for="{{form.email.name}}">{{form.email.label}}</label>
+			<input id="{{form.email.name}}" type="text" name="{{form.email.name}}" required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placholder="{{form.email.placeholder}}" class="required-field">
+			<br>
+			<label for="{{form.message.name}}">{{form.message.label}}</label><br>
+			<textarea id="{{form.message.name}}" name="{{form.message.name}}" required="true" placeholder="{{form.message.placholder}}"></textarea>
+    		<br>
+    		<input type="submit" class="btn" id="submit-contact" name="submit" value="{{submitButtonText}}" class="required-field">
+    	</form>
+    	<!-- a11y form end -->
+    </contactus>
+</section>

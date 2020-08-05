@@ -1,0 +1,26 @@
+.message {
+  padding: 10px;
+  border: 1px solid $black;
+  display: block;
+  border-radius: 4px;
+  color: $black;
+  margin-bottom: 16px;
+
+  &.success {
+    background-color: $success-green;
+    color: $white;
+    border-color: transparent;
+  }
+
+  &.error {
+    background-color: $alert-red;
+    color: $white;
+    border-color: transparent;
+  }
+
+  &.info {
+    background-color: $info-orange;
+    color: $white;
+    border-color: transparent;
+  }
+}

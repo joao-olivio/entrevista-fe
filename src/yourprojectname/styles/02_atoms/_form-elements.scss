@@ -1,0 +1,31 @@
+input,
+textarea {
+  padding: 16px 8px;
+  border: 1px solid $medium-grey;
+  border-radius: 4px;
+  display: flex;
+  margin-bottom: 16px;
+  width: 100%;
+  max-width: 50%;
+
+  &.error {
+  	border-color: $alert-red;
+    margin-bottom: 8px;
+  }
+}
+
+.input-label {
+	margin-bottom: 8px;
+	display: block;
+}
+
+.error-message {
+  margin-bottom: 16px;
+  color: $alert-red;
+  display: none;
+  font-size: 12px;
+
+  &.show {
+    display: block;
+  }
+}

@@ -1,0 +1,41 @@
+.btn {
+  appearance: none;
+  touch-callout: none;
+  border: 1px solid transparent;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  background-color: slategray;
+  color: white;
+  transition: all 0.2s ease 0s;
+  text-decoration: none;
+  margin: 20px 0px;
+  padding: 15px 40px;
+  border-radius: 4px;
+  font-size: rem(12);
+
+  &:hover {
+    cursor: pointer;
+    color: slategray;
+    border-color: slategray;
+    background-color: white;
+    transform: scale(1.025)
+  }
+
+  &:focus {
+    outline: 2px solid blue;
+    outline-offset: 1px;
+  }
+
+  &[disabled] {
+    background-color: gainsboro;
+    color: white;
+
+    &:hover {
+      border-color: gainsboro;
+      transform: scale(0.95);
+    }
+  }
+}
