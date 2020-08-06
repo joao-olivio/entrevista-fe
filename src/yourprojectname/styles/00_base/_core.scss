@@ -4,3 +4,8 @@ body {
   background-color: $light-grey;
   font-family: $font-regular;
 }
+
+.container {
+  max-width: 90vw;
+  margin: auto;
+}

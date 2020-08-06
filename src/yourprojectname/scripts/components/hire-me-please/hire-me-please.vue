@@ -37,7 +37,7 @@
     },
     computed: {
       messageError() {
-        return this.message === '' && this.messageDirty;
+        return this.message === '' && this.messageDirty
       },
     },
     mounted() {
@@ -49,15 +49,15 @@
     },
     methods: {
       submit() {
-        this.messageDirty = true;
+        this.messageDirty = true
 
         if (this.messageError) {
-          return;
+          return
         }
 
         const parseJSON = (response) => response.json()
 
-        fetch(`${this.apiUrl}?message=${this.message}`, 
+        fetch(`${this.apiUrl}?message=${this.message}`,
           {
             method: 'GET',
             headers: { 'Content-Type': 'application/jsoncharset=utf-8' },
@@ -65,14 +65,14 @@
           })
           .then(parseJSON)
           .then(data => {
-            this.answer = data.answer 
+            this.answer = data.answer
           })
           .catch(error => {
             console.error('Could not load answer', error) // eslint-disable-line no-console
           })
       },
       dirtyMessage() {
-        this.messageDirty = true;
+        this.messageDirty = true
       },
     }
   }

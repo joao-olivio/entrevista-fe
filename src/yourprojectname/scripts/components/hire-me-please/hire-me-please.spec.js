@@ -1,10 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import HireMePlease from './hire-me-please'
 
-// const localVue = createLocalVue();
-
-console.log('aqui')
-
 describe('HireMePlease', () => {
   let wrapper;
 
