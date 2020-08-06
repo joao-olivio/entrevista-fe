@@ -71,28 +71,23 @@ fractal.web.set('server.syncOptions', {
   middleware: [
     {
       route: '/api',
-      handle: (request, response) => {
-        // Directory of all mock API files
+      handle: (request, response, next) => {
         const mocksPath = '../../fractal/components/mocks/'
-
-        // Filename is just the url of the API + .json
-        const requestUrlPath = request.url.split('/')
-        const fileName = `${(requestUrlPath[requestUrlPath.length - 1])}.json`
+        const fileName = request.url.indexOf('?') !== -1 ?
+          `${request.url.substring(1, request.url.indexOf('?'))}.json` :  // '/search?query=123' => 'search'
+          `${request.url.substring(1)}.json`
         const filePath = path.join(__dirname, `${mocksPath}${fileName}`)
 
-        // Emulate API Response
         fs.exists(filePath, (exists) => {
           if (exists) {
-            // Emulate success response
             setTimeout(() => {
-              console.log(`Giving out the ${fileName} mock! @${filePath}`)
+              console.log(`Giving out the "${fileName}" mock!`)
               response.writeHead(200, { 'Content-Type': 'application/json' })
               fs.createReadStream(filePath).pipe(response)
             }, 1500)
           } else {
-            // Emulate error response
             response.writeHead(404, { 'Content-Type': 'text/plain' })
-            response.end(`ERROR File does not exist @${filePath}`)
+            response.end('ERROR File does not exist')
           }
         })
       }

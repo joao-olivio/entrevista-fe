@@ -1,10 +1,10 @@
 import Vue from 'vue'
 
 // Import Components
-// import CookieBanner from './components/02_atoms/cookie-banner/cookie-banner.vue'
+import HireMePlease from './components/hire-me-please/hire-me-please.vue'
 
 // Vue Declaration for Components
-// Vue.component(CookieBanner.name, CookieBanner)
+Vue.component(HireMePlease.name, HireMePlease)
 
 // Import Directives
 import {
