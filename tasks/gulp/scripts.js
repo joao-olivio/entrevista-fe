@@ -1,15 +1,3 @@
-/**
- * Created by christophe.gaon on 30/01/2017.
- */
-
-
-// Config that can be loaded externally, similar
-// to [gulp-starter](https://github.com/greypants/gulp-starter)
-// Gulp + Browserify recipe
-// ------------------------
-// Includes react JSX, coffeescript, uglify & sourcemaps
-// Supports multiple input & output files
-
 const gulp = require('gulp')
 const browserify = require('browserify')
 const globby = require('globby')
@@ -24,16 +12,13 @@ const envify = require('envify/custom')
 const config = require('./../config')
 const utils = require('./utils')
 
-
 let FeaturesFondationsSrc
 
 /**
  * On get Error on promess of this task
  * @param err
  */
-const onError = (err) => {
-  console.error('onError', err)
-};
+const onError = err => console.error('onError', err)
 
 /**
  * on getting the paths of all code in project level
@@ -48,12 +33,7 @@ const onGetProjectcode = (files) => {
       ignore: '!**/*.spec.js',
       debug: true,
     })
-      .transform(envify({
-        _: 'purge',
-        NODE_ENV: production() ? 'production' : 'development'
-      }), {
-        global: true
-      })
+      .transform(envify({ _: 'purge', NODE_ENV: production() ? 'production' : 'development' }), { global: true })
       .transform('babelify')
       .transform('browserify-shim')
       .transform('vueify')
@@ -67,7 +47,7 @@ const onGetProjectcode = (files) => {
 
   // create a merged stream
   return es.merge.apply(null, tasks)
-};
+}
 
 /**
  * on get the paths of all code in feature and foundation level
@@ -77,13 +57,11 @@ const onGetFondationFeatureCode = (paths) => {
   FeaturesFondationsSrc = paths
   return globby([`${config.directories.projectDirectory}**/*/entry.js`])
     .then(onGetProjectcode, onError)
-};
+}
 
-module.exports = function (gulp) {
+module.exports = function () {
   return function () {
-    return globby([
-      `${config.directories.projectDirectory}**/entry.js`,
-      `${config.directories.projectDirectory}**/entry.js`])
+    return globby([`${config.directories.foundationDirectory}**/entry.js`, `${config.directories.featureDirectory}**/entry.js`])
       .then(onGetFondationFeatureCode, onError)
-  };
+  }
 }

@@ -24,7 +24,7 @@ module.exports = function (gulp) {
     /**
      * Find all icons directories
      */
-    return glob(`${config.directories.projectDirectory}**/Icons`, (err, files) => {
+    return glob(`${config.directories.projectDirectory}**/code/**/Icons`, (err, files) => {
       /**
        * Map all icon directories to tasks
        */

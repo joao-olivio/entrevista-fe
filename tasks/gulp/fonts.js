@@ -9,7 +9,7 @@ module.exports = function (gulp) {
     /**
      * Find all font directories
      */
-    return glob(`${config.directories.projectDirectory}**/Fonts`, (err, files) => {
+    return glob(`${config.directories.projectDirectory}**/code/**/Fonts`, (err, files) => {
       /**
        * Map all font directories to tasks
        */
@@ -22,12 +22,12 @@ module.exports = function (gulp) {
         /**
          * Copy the fonts from the /src directory to the project folder
          */
-        return gulp.src(`${fontsDirectoryPath}**/*`)
+        return gulp.src(`${fontsDirectoryPath}**/**`) // added extra * so also folders are copied.
           .pipe(gulp.dest(config.directories.themeBuildDirectory + themeName))
       })
 
       // create a merged stream
       return es.merge.apply(null, tasks)
     })
-  };
+  }
 }

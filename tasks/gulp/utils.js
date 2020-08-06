@@ -16,5 +16,5 @@ module.exports = {
     return files_
   },
 
-  getThemeName: path => path.split('/')[1],
+  getThemeName: path => path.split('/')[2],
 }

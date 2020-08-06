@@ -4,7 +4,7 @@ import HireMePlease from './hire-me-please'
 // const localVue = createLocalVue();
 
 console.log('aqui')
-/* 
+
 describe('HireMePlease', () => {
   let wrapper;
 
@@ -23,12 +23,12 @@ describe('HireMePlease', () => {
     });
   });
 
-  test('mounts properly', () => {
+  it('mounts properly', () => {
     expect(wrapper).toBeTruthy();
   })
 
-  test('unmounts properly', () => {
+  it('unmounts properly', () => {
     wrapper.vm.$destroy();
     expect(wrapper.vm._isDestroyed).toBeTruthy();
   });
-}) */
+})
