@@ -23,4 +23,4 @@ Com os passo acima, ao entrar no endereço http://localhost:3000 o fractal deve 
   - Vue - https://vuejs.org/
   - Fractal - http://fractal.build/
   - Atomic Design - https://bradfrost.com/blog/post/atomic-web-design/
-  - Acessibilidade - https://www.w3.org/WAI/standards-guidelines/aria/
+  - Acessibilidade - https://www.w3.org/TR/WCAG20/
