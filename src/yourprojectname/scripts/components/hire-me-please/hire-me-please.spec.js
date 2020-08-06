@@ -1,10 +1,8 @@
 import { shallowMount } from '@vue/test-utils'
 import HireMePlease from './hire-me-please'
 
-// const localVue = createLocalVue();
+console.log('aqui', HireMePlease)
 
-console.log('aqui')
-/* 
 describe('HireMePlease', () => {
   let wrapper;
 
@@ -31,4 +29,4 @@ describe('HireMePlease', () => {
     wrapper.vm.$destroy();
     expect(wrapper.vm._isDestroyed).toBeTruthy();
   });
-}) */
+})
