@@ -157,6 +157,10 @@ module.exports = {
           {
             color: '#86007DFF',
             area: '5/6/6/8'
+          },
+          {
+            color: '#86007DFF',
+            area: '5/7/6/9'
           }
         ]
       }
