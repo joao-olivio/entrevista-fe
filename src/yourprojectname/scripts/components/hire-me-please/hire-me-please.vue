@@ -55,15 +55,13 @@
           return
         }
 
-        const parseJSON = (response) => response.json()
-
         fetch(`${this.apiUrl}?message=${this.message}`,
           {
             method: 'GET',
             headers: { 'Content-Type': 'application/jsoncharset=utf-8' },
             credentials: 'same-origin',
           })
-          .then(parseJSON)
+          .then(this.parseJSON)
           .then(data => {
             this.answer = data.answer
           })
@@ -74,6 +72,9 @@
       dirtyMessage() {
         this.messageDirty = true
       },
+      parseJSON(response) {
+        response.json()
+      }
     }
   }
 </script>
