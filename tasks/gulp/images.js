@@ -12,7 +12,7 @@ module.exports = function (gulp) {
     /**
      * Find all images folders
      */
-    return glob(`${config.directories.projectDirectory}**/Images`, (err, files) => {
+    return glob(`${config.directories.projectDirectory}**/code/**/Images`, (err, files) => {
       /**
        * map the folders to tasks
        */
@@ -32,5 +32,5 @@ module.exports = function (gulp) {
       // create a merged stream
       return es.merge.apply(null, tasks)
     })
-  };
+  }
 }

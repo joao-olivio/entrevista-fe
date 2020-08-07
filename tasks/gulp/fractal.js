@@ -1,5 +1,12 @@
 const fs = require('fs')
+const express = require('express')
+const cors = require('cors')
+const parrot = require('parrot-middleware')
+
 const config = require('./../config')
+const { getMock } = require('../mocks')
+
+const scenarios = require('../scenarios')
 
 /*
 * Are we in build mode?
@@ -26,7 +33,7 @@ fractal.set('project.title', config.currentWebsite)
 fractal.components.set('path', path.join(__dirname, '../../fractal/components'))
 fractal.components.set('default.preview', '@preview')
 fractal.components.set('default.context', {
-  imgDir: `${buildMode ? config.fractalExternalBuildPrefix : '/'}images`,
+  imgDir: `${buildMode ? config.fractalExternalBuildPrefix : '/'}Images`,
   site: config.currentWebsite,
 })
 
@@ -40,65 +47,51 @@ fractal.docs.set('path', path.join(__dirname, '../../fractal/docs'))
  */
 fractal.web.set('static.path', path.join(__dirname, `../../${config.directories.buildDirectory}/Website/themes/${config.currentWebsite}`))
 
-/**
- * Customize handlebars
- */
-const hbs = require('@frctl/handlebars')({
-    helpers: {
-      switch: (value, options) => {
-          this._switch_value_ = value;
-          const html = options.fn(this); // Process the body of the switch block
-          delete this._switch_value_;
-          return html;
-        },
-        case: (value, options) => {
-            if (value == this._switch_value_) {
-                return options.fn(this);
-            }
-        },
-        json: (val) => JSON.stringify(val)
-    }
-});
-fractal.components.engine(hbs);
 
 /*
  * Publish path
  */
-fractal.web.set('builder.dest', path.join(__dirname, `../../${config.directories.buildDirectory}/fractal`))
+fractal.web.set('builder.dest', path.join(__dirname, `../../${config.directories.buildDirectory}/Fractal`))
 
-// Create mock APIs
 fractal.web.set('server.syncOptions', {
   middleware: [
     {
       route: '/api',
-      handle: (request, response) => {
-        // Directory of all mock API files
+      handle: (request, response, next) => {
         const mocksPath = '../../fractal/components/mocks/'
-
-        // Filename is just the url of the API + .json
-        const requestUrlPath = request.url.split('/')
-        const fileName = `${(requestUrlPath[requestUrlPath.length - 1])}.json`
+        const fileName = request.url.indexOf('?') !== -1 ?
+          `${request.url.substring(1, request.url.indexOf('?'))}.json` :  // '/search?query=123' => 'search'
+          `${request.url.substring(1)}.json`
         const filePath = path.join(__dirname, `${mocksPath}${fileName}`)
 
-        // Emulate API Response
         fs.exists(filePath, (exists) => {
           if (exists) {
-            // Emulate success response
             setTimeout(() => {
-              console.log(`Giving out the ${fileName} mock! @${filePath}`)
+              console.log(`Giving out the "${fileName}" mock!`)
               response.writeHead(200, { 'Content-Type': 'application/json' })
               fs.createReadStream(filePath).pipe(response)
             }, 1500)
           } else {
-            // Emulate error response
             response.writeHead(404, { 'Content-Type': 'text/plain' })
-            response.end(`ERROR File does not exist @${filePath}`)
+            response.end('ERROR File does not exist')
           }
         })
       }
     }
   ]
 })
+
+/**
+ * Customize handlebars
+ */
+const hbs = require('@frctl/handlebars')({
+  helpers: {
+    json: val => JSON.stringify(val),
+    mock: val => getMock(val)
+  }
+})
+
+fractal.components.engine(hbs)
 
 const logger = fractal.cli.console
 
@@ -113,6 +106,21 @@ module.exports = function (gulp) {
 
       return server.start().then(() => {
         logger.success(`Fractal server is now running at ${server.url} for project ${config.currentWebsite}`)
+
+        return new Promise((resolve, reject) => {
+          const app = express()
+          app.use(cors())
+          app.use(parrot(scenarios))
+
+          app.listen(9999, error => {
+            if (error) {
+              reject(error)
+            } else {
+              logger.success(`parrot-server up and listening on port ${9999}`) // eslint-disable-line no-console
+              resolve()
+            }
+          })
+        })
       })
     }
 
