@@ -20,7 +20,10 @@ $ npm run develop
 Com os passo acima, ao entrar no endereço http://localhost:3000 o fractal deve estar sendo executado.
 
 # Referencias
-  - Vue - https://vuejs.org/
-  - Fractal - http://fractal.build/
-  - Atomic Design - https://bradfrost.com/blog/post/atomic-web-design/
-  - Acessibilidade - https://www.w3.org/TR/WCAG20/
+  - [Vue](https://vuejs.org/)
+  - [Vue Utils](https://vue-test-utils.vuejs.org/)
+  - [Jest](https://jestjs.io/)
+  - [Fractal](http://fractal.build/)
+  - [Handlebars](https://handlebarsjs.com/)
+  - [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
+  - [Acessibilidade](https://www.w3.org/TR/WCAG20/)
