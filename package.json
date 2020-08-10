@@ -34,14 +34,15 @@
     "es6-promise": "^4.1.1",
     "include-media": "^1.4.9",
     "url-search-params-polyfill": "^2.0.1",
-    "vue": "2.5.2",
+    "vue": "^2.6.11",
     "vueify": "^9.4.1",
+    "vuetify": "^2.3.8",
     "vuex": "^2.3.1",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "@frctl/fractal": "^1.2.1",
-    "@vue/test-utils": "^1.0.0-beta.29",
+    "@vue/test-utils": "^1.0.3",
     "autoprefixer": "^6.7.3",
     "babel-core": "^6.26.3",
     "babel-jest": "^21.0.2",
@@ -113,8 +114,8 @@
     "vinyl-source-stream": "^1.1.0",
     "vue-eslint-parser": "^3.3.0",
     "vue-jest": "^1.0.2",
-    "vue-server-renderer": "2.5.2",
-    "vue-template-compiler": "2.5.2",
+    "vue-server-renderer": "^2.6.11",
+    "vue-template-compiler": "^2.5.2",
     "vue-test-utils": "^1.0.0-beta",
     "vue-update": "^1.0.6"
   }

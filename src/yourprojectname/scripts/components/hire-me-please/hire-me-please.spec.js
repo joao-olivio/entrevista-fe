@@ -1,29 +1,28 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils'
-import HireMePlease from './hire-me-please'
+import { shallowMount, createLocalVue } from "@vue/test-utils";
+import HireMePlease from "./hire-me-please";
 
-const localVue = createLocalVue()
+const localVue = createLocalVue();
 
-describe('HireMePlease', () => {
-  let wrapper
-  let mockResponse
+describe("HireMePlease", () => {
+  let wrapper;
+  let mockResponse;
 
   beforeEach(() => {
-
     wrapper = shallowMount(HireMePlease, {
       propsData: {
-        apiUrl: '/api/hire/me'
+        apiUrl: "/api/hire/me"
       },
       slots: {
         default: `<button class="btn btn--primary">
-                    Hire Me!
-                  </button>`
+        Hire Me!
+        </button>`
       },
       localVue
     });
 
     mockResponse = {
-      "error": false,
-      "answer": "I believe in you!"
+      error: false,
+      answer: "I believe in you!"
     };
 
     window.fetch = jest.fn().mockImplementation(() => {
@@ -34,59 +33,59 @@ describe('HireMePlease', () => {
     });
   });
 
-  it('mounts properly', () => {
+  it("mounts properly", () => {
     expect(wrapper).toBeTruthy();
-  })
+  });
 
-  it('unmounts properly', () => {
+  it("unmounts properly", () => {
     wrapper.vm.$destroy();
     expect(wrapper.vm._isDestroyed).toBeTruthy();
   });
 
-  it('message is empty', () => {
-    expect(wrapper.vm._data.message).toBe('')
+  it("message is empty", () => {
+    expect(wrapper.vm._data.message).toBe("");
   });
 
-  it('message gets dirty on submit', () => {
-    wrapper.vm.submit()
+  it("message gets dirty on submit", () => {
+    wrapper.vm.submit();
 
-    expect(wrapper.vm._data.messageDirty).toBe(true)
+    expect(wrapper.vm._data.messageDirty).toBe(true);
   });
 
-  it('should submit on trigger click', () => {
-    const submit = jest.fn()
-    const button = wrapper.find('button')
+  it("should submit on trigger click", () => {
+    const submit = jest.fn();
+    const button = wrapper.find("button");
 
-    wrapper.setMethods({ submit: submit })
+    wrapper.setMethods({ submit: submit });
 
-    button.trigger('click')
+    button.trigger("click");
 
-    expect(wrapper.vm.submit).toHaveBeenCalled()
-  })
+    expect(wrapper.vm.submit).toHaveBeenCalled();
+  });
 
-  it('should not submit without a message filled by the user', () => {
-    wrapper.vm.submit()
+  it("should not submit without a message filled by the user", () => {
+    wrapper.vm.submit();
 
-    expect(wrapper.vm.messageError).toBe(true)
-  })
+    expect(wrapper.vm.messageError).toBe(true);
+  });
 
-  it('should submit when there\'s no errors', () => {
+  it("should submit when there's no errors", () => {
     wrapper.setData({
-      message: 'hi!'
-    })
+      message: "hi!"
+    });
 
-    wrapper.vm.submit()
+    wrapper.vm.submit();
 
-    expect(wrapper.vm.messageError).toBe(false)
-  })
+    expect(wrapper.vm.messageError).toBe(false);
+  });
 
-  it('should fetch', () => {
+  it("should fetch", () => {
     wrapper.setData({
-      message: 'hi!'
-    })
+      message: "hi!"
+    });
 
-    wrapper.vm.submit()
+    wrapper.vm.submit();
 
-    expect(window.fetch).toHaveBeenCalled
-  })
-})
+    expect(window.fetch).toHaveBeenCalled();
+  });
+});

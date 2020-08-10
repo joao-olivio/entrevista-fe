@@ -1,2 +1,2 @@
-export * from './background/background'
-export * from './ellipsis/ellipsis'
+export * from "./background/background";
+export * from "./ellipsis/ellipsis";

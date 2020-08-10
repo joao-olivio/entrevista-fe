@@ -1,7 +1,7 @@
-import truncate from 'lodash/truncate'
+import truncate from "lodash/truncate";
 
 /** The fallback truncate length */
-export const defaultTruncateLength = 150
+export const defaultTruncateLength = 150;
 
 /**
  * @desc Returns a string with three dots if it exceeds the limit given
@@ -11,20 +11,22 @@ export const defaultTruncateLength = 150
  * @return {string} The truncated string
  */
 export function truncateString(string, limit = defaultTruncateLength) {
-  const dots = '...'
-  return string.length > limit ? truncate(string, {
-    length: limit - dots.length,
-    omission: dots
-  }) : string
+  const dots = "...";
+  return string.length > limit
+    ? truncate(string, {
+        length: limit - dots.length,
+        omission: dots
+      })
+    : string;
 }
 
 export const ellipsis = {
-  name: 'ellipsis',
+  name: "ellipsis",
   bind: (el, binding) => {
-    const element = el
-    const truncateLength = binding.expression
+    const element = el;
+    const truncateLength = binding.expression;
 
     /** Replace the innerhtml with the truncated string */
-    element.innerHTML = truncateString(element.innerHTML, truncateLength)
-  },
-}
+    element.innerHTML = truncateString(element.innerHTML, truncateLength);
+  }
+};

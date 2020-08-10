@@ -2,9 +2,7 @@ module.exports = {
 
   directories: {
     src: 'src/',
-    featureDirectory: 'src/Feature/',
-    projectDirectory: 'src/Project/',
-    foundationDirectory: 'src/Foundation/',
+    projectDirectory: 'src/',
     buildDirectory: './build',
     themeBuildDirectory: './build/Website/themes/',
     websiteDirectory: './build/Website/'

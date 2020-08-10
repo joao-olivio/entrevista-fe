@@ -7,12 +7,7 @@ module.exports = function (gulp) {
   return function () {
     return gulp.src([
       `${config.directories.projectDirectory}**/*.{js,vue}`,
-      `${config.directories.featureDirectory}**/*.{js,vue}`,
-      `${config.directories.foundationDirectory}**/*.{js,vue}`,
       `!${config.directories.projectDirectory}**/*.spec.js`,
-      `!${config.directories.featureDirectory}**/*.spec.js`,
-      `!${config.directories.featureDirectory}**/*.min.js`,
-      `!${config.directories.foundationDirectory}**/*.spec.js`,
       '!node_modules/**'
     ])
     .pipe(cache('linting'))
