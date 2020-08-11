@@ -36,10 +36,10 @@ module.exports = function(gulp) {
       (err, files) => {
         const tasks = files.map(entry => {
           const themeName = utils.getThemeName(entry);
-
+          console.log(themeName)
           return (
             gulp
-              .src([`${config.directories.featureDirectory}**/*.scss`, entry])
+              .src([`${config.directories.projectDirectory}**/*.scss`, entry])
               // .pipe(sourcemaps.init())  Currently an error in the gulp-sourcemaps plugin... Enable once fixed
               .pipe(sass().on('error', sass.logError))
               .pipe(
