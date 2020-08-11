@@ -63,7 +63,6 @@ export default {
       })
         .then(this.parseJSON)
         .then(data => {
-          console.log('data', data);
           this.answer = data.answer;
         })
         .catch(error => {
