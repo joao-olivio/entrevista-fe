@@ -73,7 +73,7 @@ export default {
       this.messageDirty = true;
     },
     parseJSON(response) {
-      response.json();
+      return response.json();
     }
   }
 };
