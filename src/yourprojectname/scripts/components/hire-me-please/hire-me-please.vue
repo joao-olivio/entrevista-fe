@@ -63,6 +63,7 @@ export default {
       })
         .then(this.parseJSON)
         .then(data => {
+          console.log('data', data);
           this.answer = data.answer;
         })
         .catch(error => {
@@ -73,7 +74,7 @@ export default {
       this.messageDirty = true;
     },
     parseJSON(response) {
-      response.json();
+      return response.json();
     }
   }
 };
