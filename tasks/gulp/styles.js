@@ -36,7 +36,6 @@ module.exports = function(gulp) {
       (err, files) => {
         const tasks = files.map(entry => {
           const themeName = utils.getThemeName(entry);
-          console.log(themeName)
           return (
             gulp
               .src([`${config.directories.projectDirectory}**/*.scss`, entry])
