@@ -12,7 +12,7 @@ module.exports = function (gulp) {
     /**
      * Find all images folders
      */
-    return glob(`${config.directories.projectDirectory}**/code/**/Images`, (err, files) => {
+    return glob(`${config.directories.projectDirectory}**/images`, (err, files) => {
       /**
        * map the folders to tasks
        */
@@ -26,7 +26,7 @@ module.exports = function (gulp) {
          */
         return gulp.src(`${imagesDirectoryPath}/**/*`)
           .pipe(production(imagemin()))
-          .pipe(gulp.dest(`${config.directories.themeBuildDirectory + themeName}/Images`))
+          .pipe(gulp.dest(`${config.directories.themeBuildDirectory + themeName}/`))
       })
 
       // create a merged stream
