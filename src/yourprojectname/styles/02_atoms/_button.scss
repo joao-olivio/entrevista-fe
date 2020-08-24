@@ -1,18 +1,18 @@
 .btn {
   position: relative;
   font-family: $font-regular;
-  font-weight: 700;
-  background: $white;
-  border: 2px solid $black;
-  color: $black;
+  font-size: rem(13px);
+  font-weight: bold;
+  background: $action-blue;
+  color: $white;
+  border: 2px solid $action-blue;
   text-transform: uppercase;
-  padding: rem(10px 30px);
-  min-height: rem(45px);
-  min-width: rem(165px);
+  min-height: rem(50px);
+  min-width: rem(240px);
   display: inline-block;
   text-align: center;
   overflow: hidden;
-
+  letter-spacing: rem(1px);
   &::before {
     content: '';
     position: absolute;
@@ -42,4 +42,12 @@
       padding-right: rem(10px);
     }
   }
+
+  &:first-of-type {
+    color: white;
+    background-color: $default-black;
+    border: 2px solid $default-black;
+    min-width: rem(154px);
+    min-height: rem(50px);
+  } 
 }
