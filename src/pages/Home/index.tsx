@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import logoBlack from '../../assets/logo-black.svg';
-import Button from '../../components/Button';
+
+import Card from '../../components/Card';
 
 import { Container, Header, LastEpisodes } from './styles';
 
@@ -18,7 +19,16 @@ const Home: React.FC = () => {
         <Link to="/">Listen now</Link>
       </Header>
 
-      <LastEpisodes />
+      <LastEpisodes>
+        <h2>
+          Last <br />
+          Eposodes
+        </h2>
+
+        <div className="card-list">
+          <Card />
+        </div>
+      </LastEpisodes>
     </Container>
   );
 };
