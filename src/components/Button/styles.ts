@@ -10,6 +10,7 @@ export const Container = styled.button<ButtonProps>`
   padding: 0 1rem;
   font-weight: bold;
   text-transform: uppercase;
+  transition: opacity 0.4s;
 
   ${props =>
     props.color === 'black' &&
@@ -24,4 +25,9 @@ export const Container = styled.button<ButtonProps>`
       background: var(--color-teriary);
       color: var(--color-secondary);
     `}
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 `;

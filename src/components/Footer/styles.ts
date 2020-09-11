@@ -8,7 +8,7 @@ export const Container = styled.div`
   padding: 6.4em 0;
 
   background: var(--color-secondary);
-  border-top: var(--dark-gray);
+  border-top: 1px solid var(--dark-gray);
 
   div.logo-img {
     &::after {
@@ -60,7 +60,8 @@ export const Links = styled.ul`
         transition: width 0.4s;
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
         &::after {
           width: 100%;
         }
