@@ -11,6 +11,17 @@ export const Header = styled.header`
   place-items: center;
   margin-top: 15em;
 
+  div.logo-img {
+    &::after {
+      content: '';
+      display: block;
+      width: 11rem;
+      height: 2px;
+      margin: 1rem auto;
+      background: var(--color-teriary);
+    }
+  }
+
   img {
     width: 100%;
   }
@@ -19,15 +30,6 @@ export const Header = styled.header`
     font-size: 2.8rem;
     font-weight: 300;
     text-align: center;
-
-    &::before {
-      content: '';
-      display: block;
-      width: 11rem;
-      height: 2px;
-      margin: 1rem auto;
-      background: var(--color-teriary);
-    }
   }
 
   a {
@@ -48,7 +50,8 @@ export const Header = styled.header`
     text-decoration: none;
     transition: opacity 0.4s;
 
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 0.8;
     }
   }

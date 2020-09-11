@@ -6,7 +6,9 @@ export default createGlobalStyle`
     --color-secondary: #111111;
     --color-teriary: #5CD0FE;
 
+    --light-gray: #ccc;
     --gray: #777;
+    --dark-gray: #333;
   }
 
   * {

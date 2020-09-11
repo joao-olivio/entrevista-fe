@@ -12,7 +12,10 @@ const Home: React.FC = () => {
     <Container>
       <Header>
         <h1>
-          <img src={logoBlack} alt="valtech" />
+          <div className="logo-img">
+            <img src={logoBlack} alt="valtech" />
+          </div>
+
           <p>The Podcast</p>
         </h1>
 
