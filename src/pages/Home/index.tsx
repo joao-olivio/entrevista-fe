@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { MdEmail } from 'react-icons/md';
 
 import logoBlack from '../../assets/logo-black.svg';
 import manImg from '../../assets/man.png';
@@ -9,6 +9,7 @@ import blueCloud from '../../assets/cloud-blue.svg';
 import Button from '../../components/Button';
 
 import Card from '../../components/Card';
+import Input from '../../components/Input';
 
 import {
   Container,
@@ -16,6 +17,7 @@ import {
   LastEpisodes,
   AboutTheShow,
   ComingNext,
+  Subscribe,
 } from './styles';
 
 const Home: React.FC = () => {
@@ -30,7 +32,7 @@ const Home: React.FC = () => {
           <p>The Podcast</p>
         </h1>
 
-        <Link to="/">Listen now</Link>
+        <Button color="black">Listen now</Button>
       </Header>
 
       <LastEpisodes>
@@ -79,6 +81,23 @@ const Home: React.FC = () => {
 
         <p className="person-name">Danny Baker</p>
       </ComingNext>
+
+      <Subscribe>
+        <h2>
+          <span>Subscribe</span>
+        </h2>
+
+        <p>
+          Subscribe to our newsletter, to be always aware of our company events.
+          <br />
+          We build the most powerful and flexible tools for internet commerce.
+        </p>
+
+        <form onSubmit={() => {}}>
+          <Input icon={MdEmail} placeholder="Type your email" />
+          <Button color="blue">Send</Button>
+        </form>
+      </Subscribe>
     </Container>
   );
 };

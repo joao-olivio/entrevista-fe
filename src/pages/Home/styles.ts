@@ -54,7 +54,7 @@ export const Header = styled.section`
     }
   }
 
-  a {
+  button {
     width: 15rem;
     height: 5rem;
     display: flex;
@@ -62,20 +62,6 @@ export const Header = styled.section`
     justify-content: center;
     margin-top: 2rem;
     padding: 0 1rem;
-
-    background: var(--color-secondary);
-    color: #fff;
-    border: 0;
-
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: opacity 0.4s;
-
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
   }
 `;
 
@@ -123,7 +109,7 @@ export const AboutTheShow = styled.section`
   flex-direction: column;
   padding: 6.4rem 4rem;
 
-  background: var(--color-secondary) url();
+  background: var(--color-secondary);
   color: #fff;
 
   h2 {
@@ -229,5 +215,57 @@ export const ComingNext = styled.section`
       font-weight: 900;
       line-height: 3.2rem;
     }
+  }
+`;
+
+export const Subscribe = styled.section`
+  padding: 6.4rem 4rem;
+
+  background: var(--color-secondary);
+  color: #fff;
+
+  h2 {
+    position: relative;
+
+    font-size: 4rem;
+    line-height: 8rem;
+    letter-spacing: -1.5px;
+
+    span {
+      display: block;
+      line-height: 4rem;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 17rem;
+      height: 2px;
+      margin: 1.6rem 0 2rem;
+      background: var(--color-teriary);
+    }
+
+    &::before {
+      content: 'Subscribe';
+      position: absolute;
+      top: -1.5rem;
+      left: -2.5rem;
+
+      font-size: 6rem;
+      font-weight: 900;
+
+      opacity: 0.05;
+    }
+  }
+
+  p {
+    margin-bottom: 2rem;
+    line-height: 2.2rem;
+  }
+
+  button {
+    width: 100%;
+
+    margin-top: 1.6rem;
   }
 `;
