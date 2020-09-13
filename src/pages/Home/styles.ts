@@ -2,15 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   flex: 1;
-
-  .card-list {
-    display: flex;
-    overflow: hidden;
-
-    div + div {
-      margin-left: 1.6em;
-    }
-  }
 `;
 
 export const Header = styled.section`
@@ -98,7 +89,7 @@ export const LastEpisodes = styled.section`
     }
   }
 
-  button {
+  > button {
     width: 100%;
     margin-top: 3.2rem;
   }

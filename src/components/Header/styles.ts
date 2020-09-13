@@ -107,12 +107,10 @@ export const HamburgerButton = styled.div<MenuProps>`
 
   height: 4.8rem;
 
-  .hamburger-react {
-    ${props =>
-      props.open &&
-      css`
-        position: fixed;
-        top: 0;
-      `}
-  }
+  ${props =>
+    props.open &&
+    css`
+      position: fixed;
+      top: 0;
+    `}
 `;
