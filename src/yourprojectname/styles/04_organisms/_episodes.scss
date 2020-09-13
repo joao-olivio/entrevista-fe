@@ -1,0 +1,15 @@
+.episodes{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 66px;
+  width: calc(100% - 66px*2);
+  margin-top: 30px;
+  box-sizing: border-box;
+  overflow: auto;
+  @include media('xs'){
+    margin: 0 0;
+    margin-top: 30px;
+    width: 100%;
+  }
+}

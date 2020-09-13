@@ -1,11 +1,12 @@
 body {
   min-height: 100vh;
   min-width: 100vw;
-  background-color: $light-grey;
+  background-color: $white;
   font-family: $font-regular;
 }
 
 .container {
-  max-width: 90vw;
+  max-width: 1310px;
+  width: 90vw;
   margin: auto;
 }

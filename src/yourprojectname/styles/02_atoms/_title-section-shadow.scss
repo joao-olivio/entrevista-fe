@@ -1,0 +1,19 @@
+.title-shadow{
+  font-size: 200px;
+  font-weight: 800;
+  line-height: 273px;
+  letter-spacing: -10px;
+  color: #F0F0F0;
+  margin-left: 50px;
+  max-width: 100%;
+
+  @include media('sm-lg'){
+    font-size: 14vw;
+  }
+
+  @include media('xs'){
+    font-size: 23.5vw;
+    margin-left: -60vw;
+    letter-spacing: -0.9vw;
+  }
+}

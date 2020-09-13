@@ -1,6 +1,13 @@
 .pixel {
-  background: #181425;
-  width: 40px;
-  height: 40px;
   border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 34vw;
+  height: 34vw;
+  max-width: 554px;
+  max-height: 554px;
+  @include media('xs'){
+    display: none;
+  }
 }
