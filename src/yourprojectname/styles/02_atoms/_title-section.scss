@@ -1,0 +1,33 @@
+.title-section{
+	font-size: 80px;
+	font-weight: 800;
+	letter-spacing: -4px;
+	line-height: 109px;
+	color: #111111;
+	position: relative;
+	width: max-content;
+  margin-bottom: 40px;
+  position: absolute;
+  left: 33%;
+  top: 26%;
+	&:after{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: calc(100% + 8px);
+		width: 100%;
+		height: 4px;
+    background: #5CD0FE;
+    @include media('xs'){
+      top: calc(100% + 25px);
+    }
+  }
+  @include media('xs'){
+    max-width: 207px;
+    font-size: 13vw;
+    line-height: 12vw;
+    left: 6vw;
+    top: 35%;
+    letter-spacing: -0.4vw;
+  }
+}

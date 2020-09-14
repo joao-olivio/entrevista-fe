@@ -1,0 +1,30 @@
+.tab{
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 2.31px;
+  text-decoration: none;
+  color: #111111;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 16px;
+  @include media('xs'){
+    display: none;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    left: 50%;
+    top: calc(100% + 11px);
+    transform: translateX(-50%);
+    height: 2px;
+    background: #111111;
+    transition: .3s;
+  }
+  &:hover, &.active{
+    &:after{
+      width: calc(100% + 4px);
+    }
+  }
+}

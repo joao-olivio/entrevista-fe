@@ -1,0 +1,16 @@
+.listen-time{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 15px;
+  line-height: 15px;
+  color: #000;
+  svg{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  .icon-play{
+    margin-right: 10px;
+  }
+}

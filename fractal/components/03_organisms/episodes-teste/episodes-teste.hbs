@@ -1,0 +1,10 @@
+{{ render '@section-header' }}
+{{ render '@tabs' }}
+
+<template>
+  <episodes v-slot="{ it }" api-url="/api/episodes">
+    {{> '@card' it }}
+  </episodes>
+</template>
+
+{{ render '@cta' }}
