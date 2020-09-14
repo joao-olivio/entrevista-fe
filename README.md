@@ -26,13 +26,13 @@ Frontend Developer challenge proposed by Valtech to create.
   - Install **[Git](https://git-scm.com/)**
   - Install **[NodeJS](https://nodejs.org/en/)**
 
-1. Clone this repository:
+**1. Clone this repository:**
 
 ```sh
   $ git clone https://github.com/frassaolucas/entrevista-fe.git
 ```
 
-2. Intall dependencies
+**2. Intall dependencies**
 
 ```sh
   $ npm install
@@ -42,7 +42,7 @@ ou
   $ yarn
 ```
 
-3. Run project locally
+**3. Run project locally**
 
 ```sh
   $ npm run start
