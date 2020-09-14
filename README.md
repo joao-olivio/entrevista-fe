@@ -1,29 +1,53 @@
-# Repositório base para FE
+<h1 align="center">
+    Challenge Valtech
+</h1>
 
+<p align="center">
+  <a href="#fire-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-techs">Techs</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#boom-start">Start</a>
+</p>
 
-Olá este é o repositório base para o teste de front end da Valtech Brasil.
-Caso tenha alguma dúvida, entre em contato com [@joao-olivio](https://github.com/joao-olivio) ou [@jackiecard](https://github.com/jackiecard).
+## :fire: About
 
-# Pré requisitos
-  - Node v10.18.6 (preferencialmente)
+Frontend Developer challenge proposed by Valtech to create.
 
-### Installation
+## :rocket: Techs
+
+-  [React]
+-  [HTML]
+-  [CSS]
+-  [Javascript]
+
+## :boom: Start
+
+- ### **Requirements**
+
+  - Install **[Git](https://git-scm.com/)**
+  - Install **[NodeJS](https://nodejs.org/en/)**
+
+**1. Clone this repository:**
 
 ```sh
-$ cd <entrevista-fe>
-$ npm install 
-$ npm run develop
+  $ git clone https://github.com/frassaolucas/entrevista-fe.git
 ```
 
-### Development
+**2. Intall dependencies**
 
-Com os passo acima, ao entrar no endereço http://localhost:3000 o fractal deve estar sendo executado.
+```sh
+  $ npm install
+```
+ou
+```sh
+  $ yarn
+```
 
-# Referencias
-  - [Vue](https://vuejs.org/)
-  - [Vue Utils](https://vue-test-utils.vuejs.org/)
-  - [Jest](https://jestjs.io/)
-  - [Fractal](http://fractal.build/)
-  - [Handlebars](https://handlebarsjs.com/)
-  - [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
-  - [Acessibilidade](https://www.w3.org/TR/WCAG20/)
+**3. Run project locally**
+
+```sh
+  $ npm run start
+```
+ou
+```sh
+  $ yarn start
+```
