@@ -1,14 +1,23 @@
 import { createGlobalStyle } from 'styled-components';
 
+export const colors = {
+  colorPrimary: '#F9F9F9',
+  colorSecondary: '#111111',
+  colorTertiary: '#5CD0FE',
+  colorGray: '#777',
+  colorLightGray: '#ccc',
+  colorDarkGray: '#333',
+};
+
 export default createGlobalStyle`
   :root {
-    --color-primary: #F9F9F9;
-    --color-secondary: #111111;
-    --color-teriary: #5CD0FE;
+    --color-primary: ${colors.colorPrimary};
+    --color-secondary: ${colors.colorSecondary};
+    --color-tertiary: ${colors.colorTertiary};
 
-    --light-gray: #ccc;
-    --gray: #777;
-    --dark-gray: #333;
+    --gray: ${colors.colorGray};
+    --light-gray: ${colors.colorLightGray};
+    --dark-gray: ${colors.colorDarkGray};
   }
 
   * {

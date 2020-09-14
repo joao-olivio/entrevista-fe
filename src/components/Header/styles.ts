@@ -26,7 +26,7 @@ export const Menu = styled.div<MenuProps>`
 
   transform: translateX(-100%);
 
-  transition: transform 0.4s;
+  transition: transform 0.6s;
 
   ${props =>
     props.open &&
@@ -43,7 +43,7 @@ export const Menu = styled.div<MenuProps>`
       width: 9rem;
       height: 2px;
       margin: 1rem auto 0;
-      background: var(--color-teriary);
+      background: var(--color-tertiary);
     }
   }
 
@@ -83,7 +83,7 @@ export const Links = styled.ul`
         height: 1px;
         margin-top: 0.4rem;
 
-        background: var(--color-teriary);
+        background: var(--color-tertiary);
         transition: width 0.4s;
       }
 
@@ -102,15 +102,19 @@ export const Links = styled.ul`
 `;
 
 export const HamburgerButton = styled.div<MenuProps>`
-  position: relative;
-  z-index: 9;
+  position: fixed;
+  top: 0%;
 
-  height: 4.8rem;
+  margin: 2rem;
+  border-radius: 50%;
+
+  background: var(--color-primary);
+
+  z-index: 9;
 
   ${props =>
     props.open &&
     css`
-      position: fixed;
-      top: 0;
+      background: var(--color-secondary);
     `}
 `;
