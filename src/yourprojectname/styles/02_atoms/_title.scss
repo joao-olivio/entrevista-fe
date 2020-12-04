@@ -1,0 +1,39 @@
+.section-title-text {
+  font-size: 40px;
+  font-weight: 800;
+  font-family: $font-regular;
+  text-align: left;
+  letter-spacing: -1.5px;
+  color: #111111;
+  line-height: 36px;
+  width: 207px;
+}
+
+.section-title-shadow {
+  position: absolute;
+  font-size: 72px;
+  font-weight: 800;
+  font-family: $font-regular;
+  text-align: left;
+  letter-spacing: -3.7px;
+  color: #F0F0F0;
+  line-height: 60px;
+  z-index: -999;
+  margin-top: 5px;
+}
+
+.section-title-line {
+  top: 574px;
+  left: 50px;
+  width: 167px;
+  height: 2px;
+  background: #5CD0FE 0% 0% no-repeat padding-box;
+  border: 0;
+  float: left;
+}
+
+.section-title{
+  .section-title-text, .section-title-line{
+    margin-left: 35px;
+  }
+}
