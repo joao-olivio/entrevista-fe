@@ -1,0 +1,90 @@
+.card-template {
+  width: 17rem;
+  max-width: 240px;
+  height: 282px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 20px $card-shadow;
+  border-radius: 4px;
+  padding: 16px;
+  border: 0 !important;
+  transition: box-shadow 0.3s ease-in-out;
+
+  & svg {
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  & a {
+    color: $black;
+
+    & svg:hover {
+      transform: scale(1.3);
+    }
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.card-title {
+  font-family: $font-regular;
+  font-weight: 300;
+  font-size: 28px;
+  text-align: left;
+  letter-spacing: 0px;
+  color: $black;
+  text-transform: uppercase;
+  line-height: 32px;
+  width: 176px;
+}
+
+.card-sub-title {
+  font-family: $font-regular;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: left;
+  letter-spacing: 0px;
+  color: $black;
+  line-height: 16px;
+}
+
+
+.card-text {
+  font-family: $font-regular;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: left;
+  letter-spacing: 0px;
+  color: $grey;
+  line-height: 13px;
+}
+
+.footer-card {
+  margin-top: 65px;
+
+  & .duration {
+    float: right;
+
+    & svg {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
+      margin-right: 5px;
+    }
+
+    & span {
+      font-family: $font-regular;
+      font-weight: 600;
+      font-size: 12px;
+      text-align: right;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 12px;
+      color: #111111;
+    }
+  }
+}

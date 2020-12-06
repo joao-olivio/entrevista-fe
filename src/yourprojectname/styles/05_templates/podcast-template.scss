@@ -1,0 +1,15 @@
+.podcast-template {
+  padding: 0 40px;
+
+  & .btn-0, .VueCarousel, .card-template {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  & .section-title {
+    // margin: 0 auto;
+    // max-width: 100%;
+  }
+  & .VueCarousel {
+      height: 100%;
+  }
+}
