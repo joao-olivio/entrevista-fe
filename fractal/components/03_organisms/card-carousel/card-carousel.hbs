@@ -1,8 +1,8 @@
-<carousel :per-page-custom="[[320, 1], [480, 1], [768, 1], [1024, 1]]" :pagination-enabled=false>
-    <slide>{{render '@card'}}</slide>
-    <slide>{{render '@card'}}</slide>
-    <slide>{{render '@card'}}</slide>
-    <slide>{{render '@card'}}</slide>
-    <slide>{{render '@card'}}</slide>
-    <slide>{{render '@card'}}</slide>
+<carousel :per-page-custom="{{perPage}}" :pagination-enabled={{pagination}} :navigation-enabled={{navigation}}
+    :navigation-click-target-size={{navigationSize}}>
+    {{#each cards}}
+    <slide>
+        {{> '@card' }}
+    </slide>
+    {{/each}}
 </carousel>

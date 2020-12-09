@@ -3,6 +3,6 @@ module.exports = {
   status: 'ready',
   context: {
     href: "#",
-    label: 'View More'
+    label: 'CTA'
   }
 }

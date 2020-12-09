@@ -15,6 +15,7 @@ import HireMePlease from "./components/hire-me-please/hire-me-please.vue";
 import Card from "./components/card/card.vue";
 import AppIcon from "./components/app-icon/app-icon.vue";
 import IconPlay from "./components/icons/icon-play.vue";
+import CardTabs from "./components/card-tabs/card-tabs.vue";
 
 // Vue Declaration for Components
 Vue.component(HireMePlease.name, HireMePlease);
@@ -24,6 +25,7 @@ Vue.component(IconPlay.name, IconPlay);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.component(Carousel.name, Carousel);
 Vue.component(Slide.name, Slide);
+Vue.component(CardTabs.name, CardTabs);
 
 // Import Directives
 import { backgroundDirective, ellipsis } from "./directives";

@@ -6,7 +6,15 @@
   letter-spacing: -1.5px;
   color: #111111;
   line-height: 36px;
-  width: 207px;
+
+
+  @media (min-width: 1200px) {
+    width: 100%;
+    text-align: center;
+    font-size: 80px;
+    letter-spacing: -4px;
+    line-height: 109px;
+  }
 }
 
 .section-title-shadow {
@@ -18,22 +26,61 @@
   letter-spacing: -3.7px;
   color: #F0F0F0;
   line-height: 60px;
-  z-index: -999;
+  z-index: -200;
   margin-top: 5px;
+
+  @media (min-width: 1200px) {
+    letter-spacing: -10px;
+    font-size: 200px;
+    line-height: 273px;
+    margin-top: -75px;
+  }
 }
 
 .section-title-line {
-  top: 574px;
-  left: 50px;
   width: 167px;
   height: 2px;
   background: #5CD0FE 0% 0% no-repeat padding-box;
   border: 0;
   float: left;
+
+  @media (min-width: 1200px) {
+    height: 4px;
+    margin-top: 0px;
+    width: 100%;
+  }
+
 }
 
-.section-title{
-  .section-title-text, .section-title-line{
+.section-title {
+
+  & .pixel {
+    display: none;
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  .section-title-text,
+  .section-title-line {
     margin-left: 35px;
   }
+
+  @media (min-width: 1200px) {
+
+    .section-title-text,
+    .section-title-line {
+      margin-left: 0px;
+    }
+
+    & .pixel {
+      display: block;
+      position: absolute;
+      z-index: -100;
+      left: 10vw;
+      top: -50px;
+    }
+  }
+
+
+
 }
