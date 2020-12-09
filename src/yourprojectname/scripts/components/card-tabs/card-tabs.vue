@@ -1,11 +1,20 @@
 <template>
   <div class="container">
-    <ul class="nav nav-tabs justify-content-center">
-      <li class="nav-item" v-for="tab in tabs" :key="tab.key">
+    <ul class="nav nav-tabs justify-content-center" role="tablist">
+      <li
+        class="nav-item"
+        role="tab"
+        v-for="tab in tabs"
+        :key="tab.key"
+        :title="tab.name"
+      >
         <a
           class="nav-link"
           @click.prevent="setActive(tab.key)"
           :class="{ active: isActive(tab.key) }"
+          v-on:keyup.enter="setActive(tab.key)"
+          role="button"
+          tabindex="1"
           >{{ tab.name }}</a
         >
       </li>

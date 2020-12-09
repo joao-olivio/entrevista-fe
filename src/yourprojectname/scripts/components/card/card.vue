@@ -5,7 +5,7 @@
       {{ text }}
     </b-card-text>
     <div class="footer-card">
-      <a href="#">
+      <a href="#" tabindex="0">
         <app-icon
           :icon-name="actionicon"
           :width="actioniconwidth"
