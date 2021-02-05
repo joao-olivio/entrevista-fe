@@ -8,7 +8,7 @@ module.exports = {
     websiteDirectory: './build/Website/',
     featureDirectory: 'src/',
   },
-  currentWebsite: 'yourprojectname',
+  currentWebsite: 'The Podcast',
   fractalExternalBuildPrefix: '/yourprojectname/',
   autoPrefixerBrowsers: ['last 2 versions', 'ie >= 10', 'Safari >= 9', 'iOS >= 8'],
   bundle: {

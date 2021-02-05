@@ -6,3 +6,9 @@ section {
   max-width: 1024px;
   background-color: $white;
 }
+
+.section-title {
+  @media (min-width: 1200px) {
+    margin: 0 auto;
+  }
+}
