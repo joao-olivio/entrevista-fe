@@ -1,0 +1,75 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 16rem;
+  max-width: 240px;
+  height: 340px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 32px;
+  border: 0 !important;
+  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 0px 20px #0000001a;
+
+  &__header {
+    font-size: 28px;
+    text-transform: uppercase;
+    line-height: 32px;
+    letter-spacing: 0px;
+    font-weight: 300;
+  }
+
+  &__body {
+    flex: 1;
+    &__subtitle {
+      font-weight: 600;
+    }
+    &__text {
+      color: $grey-text;
+      font-size: 13px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 42px;
+
+    &__button {
+      outline: none;
+      border: none;
+      background-color: transparent;
+      transition: all 0.2s ease;
+
+      &:focus-within {
+        transition: all 0.2s ease;
+        transform: scale(1.15);
+      }
+    }
+
+    img {
+      width: 42px;
+      height: 42px;
+      user-select: none;
+    }
+
+    svg {
+      cursor: pointer;
+      transition: all 0.2s ease;
+      &:hover {
+        transform: translateY(10px);
+        transition: all 0.2s ease;
+      }
+    }
+  }
+}
+
+.spin-enter-active,
+.spin-leave-active {
+  transition: opacity 0.2s;
+}
+.spin-enter,
+.spin-leave-to {
+  opacity: 0;
+}

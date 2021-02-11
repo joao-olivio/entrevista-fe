@@ -1,10 +1,12 @@
 import Vue from "vue";
 
 // Import Components
-import HireMePlease from "./components/hire-me-please/hire-me-please.vue";
+import Card from "./components/card/Card.vue";
+import Icon from "./components/icon/Icon.vue";
 
 // Vue Declaration for Components
-Vue.component(HireMePlease.name, HireMePlease);
+Vue.component(Card.name, Card);
+Vue.component(Icon.name, Icon);
 
 // Import Directives
 import { backgroundDirective, ellipsis } from "./directives";
