@@ -17,9 +17,10 @@
   &__page-title {
     position: relative;
     padding-top: 92px;
+
     &::before {
-      top: 12px;
-      left: -439px;
+      top: 31px;
+      left: -429px;
       border-radius: 100%;
       content: "";
       position: absolute;
@@ -31,7 +32,7 @@
       @media screen and (max-width: $breakpoint-lg) {
         width: 520px;
         height: 520px;
-        left: -426px;
+        left: -416px;
       }
 
       @media screen and (max-width: $breakpoint-md) {
@@ -58,6 +59,15 @@
       @media screen and (max-width: $breakpoint-md) {
         display: none;
       }
+    }
+  }
+
+  &__tabs {
+    padding-top: 28px;
+    z-index: $layer-3;
+
+    @media screen and (max-width: $breakpoint-sm) {
+      display: none;
     }
   }
 

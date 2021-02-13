@@ -57,7 +57,7 @@ export default {
       <div class="card__footer">
         <button
           class="card__footer__button"
-          @click="$emit('button-click', id)"
+          @click.stop="$emit('button-click', id)"
           :alt="buttonAlt"
         >
           <icon v-if="icon" :icon-name="icon" size="lg" />

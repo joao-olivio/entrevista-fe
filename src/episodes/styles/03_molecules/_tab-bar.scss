@@ -1,0 +1,7 @@
+.tab-bar {
+  &__items {
+    &:not(:last-of-type) {
+      margin-right: 32px;
+    }
+  }
+}

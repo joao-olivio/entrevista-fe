@@ -53,13 +53,22 @@
     padding-top: 15px;
 
     &__button {
+      cursor: pointer;
       outline: none;
       border: none;
       background-color: transparent;
       transition: all 0.2s ease;
 
+      &:hover {
+        transform: scale(1.1);
+      }
+
       &:focus-within {
-        transition: all 0.2s ease;
+        transform: scale(1.1);
+        fill: $dark-grey;
+      }
+
+      &:active {
         transform: scale(1.15);
       }
     }
@@ -68,15 +77,6 @@
       width: 42px;
       height: 42px;
       user-select: none;
-    }
-
-    svg {
-      cursor: pointer;
-      transition: all 0.2s ease;
-      &:hover {
-        transform: translateY(10px);
-        transition: all 0.2s ease;
-      }
     }
   }
 }

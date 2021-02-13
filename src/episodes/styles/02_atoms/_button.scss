@@ -24,7 +24,7 @@
     top: 0;
     background: rgba(26, 101, 167, 0.1);
     transform: skewX(35deg) translateX(-112%);
-    transition: 0.3s transform ease-out;
+    transition: transform 0.3s ease-out;
   }
 
   &:active {
@@ -32,6 +32,11 @@
       transform: skewX(35deg) translateX(112%);
       transition: 0s;
     }
+  }
+
+  &:focus-within {
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
   }
 
   &--icon {
