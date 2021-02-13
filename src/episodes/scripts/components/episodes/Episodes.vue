@@ -12,6 +12,9 @@ export default {
       // pretending we have a navigation here,
       // there would be something like:
       // this.$router.push({ name: "podcast", params: { id } })
+    },
+    generateDelay(index) {
+      return `animation-delay: ${0.2 * (index + 1)}s`;
     }
   }
 };
@@ -36,6 +39,7 @@ export default {
         :title="card.title"
         :subtitle="card.subtitle"
         :text="card.text"
+        :style="generateDelay(index)"
         :icon="card.icon"
         :img="card.img"
         :img-alt="card.imgAlt"
