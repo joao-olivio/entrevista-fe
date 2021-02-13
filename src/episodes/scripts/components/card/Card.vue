@@ -1,7 +1,11 @@
 <script>
 export default {
-  name: "Card",
+  name: "card",
   props: {
+    id: {
+      type: Number,
+      required: true
+    },
     title: {
       type: String,
       default: () => ""
@@ -37,9 +41,9 @@ export default {
 <template>
   <article class="card" @click="$emit('card-click')" draggable="false">
     <slot name="card-header">
-      <h2 class="card__header">
-        {{ title }}
-      </h2>
+      <div class="card__header">
+        <h2 class="card__header__text">{{ title }}</h2>
+      </div>
     </slot>
     <slot name="card-body">
       <div class="card__body">
@@ -53,10 +57,10 @@ export default {
       <div class="card__footer">
         <button
           class="card__footer__button"
-          @click="$emit('button-click')"
+          @click="$emit('button-click', id)"
           :alt="buttonAlt"
         >
-          <Icon v-if="icon" :icon-name="icon" size="lg" />
+          <icon v-if="icon" :icon-name="icon" size="lg" />
         </button>
         <img
           v-if="img"

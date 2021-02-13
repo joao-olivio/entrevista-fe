@@ -1,0 +1,30 @@
+.card-carousel {
+  display: flex;
+  width: fit-content;
+  overflow-x: auto;
+  padding-bottom: 15px;
+  max-width: 80vw;
+  scrollbar-width: none;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    display: grid;
+    grid-auto-flow: column;
+    grid-row: 1;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &::-webkit-scrollbar-track {
+    width: 0;
+    height: 0;
+  }
+
+  @media screen and(max-width: $breakpoint-sm) {
+    > article {
+      min-width: 240px;
+      width: calc(75vw - 40px);
+      height: 100%;
+    }
+  }
+}

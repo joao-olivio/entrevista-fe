@@ -2,7 +2,7 @@
 import Play from "./icons/play.vue";
 
 export default {
-  name: "Icon",
+  name: "icon",
   props: {
     iconName: {
       type: String,

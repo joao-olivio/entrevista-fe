@@ -1,0 +1,38 @@
+.page-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+  &__main-text {
+    color: $black-text;
+    font-size: 80px;
+    font-weight: bolder;
+    z-index: $layer-3;
+
+    @media screen and (max-width: $breakpoint-lg) {
+      font-size: 60px;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+      font-size: 40px;
+    }
+  }
+  &__shadow-text {
+    position: absolute;
+    font-size: 200px;
+    left: 55px;
+    color: $light-grey-text;
+    z-index: $layer-1;
+    font-weight: bolder;
+
+    @media screen and (max-width: $breakpoint-lg) {
+      font-size: 100px;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+      font-size: 74px;
+      left: -35px;
+    }
+  }
+}
