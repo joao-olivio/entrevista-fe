@@ -3,8 +3,8 @@ export default {
   name: "episodes",
   props: {
     items: {
-      type: [Array, String],
-      default: () => []
+      type: [Array, Object, String],
+      default: () => ({})
     }
   },
   data() {

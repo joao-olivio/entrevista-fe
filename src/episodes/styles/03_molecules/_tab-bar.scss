@@ -1,5 +1,22 @@
 .tab-bar {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  height: 77px;
+  width: auto;
+  max-width: 80vw;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &::-webkit-scrollbar-track {
+    width: 0;
+    height: 0;
+  }
+
   &__items {
+    white-space: nowrap;
     &:not(:last-of-type) {
       margin-right: 32px;
     }

@@ -2,9 +2,8 @@
   display: flex;
   width: fit-content;
   overflow-x: auto;
-  padding-bottom: 15px;
   max-width: 80vw;
-  scrollbar-width: none;
+  scrollbar-width: thin;
 
   @media screen and (max-width: $breakpoint-sm) {
     display: grid;
@@ -13,11 +12,28 @@
   }
 
   &::-webkit-scrollbar {
-    width: 0;
+    height: 8px;
+    outline: none;
   }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.09);
+    border-radius: 8px;
+  }
+
   &::-webkit-scrollbar-track {
-    width: 0;
-    height: 0;
+    margin-left: 10px;
+  }
+
+  &--touch {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &::-webkit-scrollbar-track {
+      display: none;
+    }
   }
 
   @media screen and(max-width: $breakpoint-sm) {
