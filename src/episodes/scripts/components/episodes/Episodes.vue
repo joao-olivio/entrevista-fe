@@ -4,13 +4,26 @@ export default {
   props: {
     items: {
       type: [Array, Object, String],
-      default: () => ({})
+      default: () => ({ all: [] })
     }
   },
   data() {
     return {
       selectedTab: "all"
     };
+  },
+  computed: {
+    getItems() {
+      if (this.items.length) {
+        if (typeof this.items === "object") return this.items[this.selectedTab];
+        if (typeof this.items === "string") {
+          const items = JSON.parse(this.items)[this.selectedTab];
+          if (Array.isArray(items)) return items;
+        }
+      }
+
+      return [];
+    }
   },
   methods: {
     goToPodcast(/* id */) {
@@ -24,7 +37,11 @@ export default {
       // this.$router.push({ name: "episodes", params: { type: selectedTab } })
     },
     generateDelay(index) {
-      return `animation-delay: ${0.2 * (index + 1)}s`;
+      const value = 0.2 * (index + 1);
+      return `animation-delay: ${value.toLocaleString("en-US", {
+        maximumFractionDigits: 1,
+        minimumFractionDigits: 1
+      })}s`;
     }
   }
 };
@@ -43,12 +60,9 @@ export default {
       :items="['all', 'development', 'design', 'project management']"
       @selected-tab="selectedTab = $event"
     />
-    <card-carousel
-      class="episodes__carousel"
-      v-if="Array.isArray(JSON.parse(items)[selectedTab])"
-    >
+    <card-carousel class="episodes__carousel">
       <card
-        v-for="(card, index) in JSON.parse(items)[selectedTab]"
+        v-for="(card, index) in getItems"
         :key="index"
         :id="index"
         class="episodes__cards"
