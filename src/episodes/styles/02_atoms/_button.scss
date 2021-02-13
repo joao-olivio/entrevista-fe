@@ -13,6 +13,7 @@
   text-align: center;
   overflow: hidden;
   cursor: pointer;
+  user-select: none;
 
   &::before {
     content: "";

@@ -4,6 +4,8 @@
   align-items: center;
   position: relative;
   width: fit-content;
+  user-select: none;
+
   &__main-text {
     color: $black-text;
     font-size: 80px;
