@@ -78,14 +78,21 @@
       height: 42px;
       user-select: none;
     }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+    }
   }
 }
 
 .spin-enter-active,
 .spin-leave-active {
-  transition: opacity 0.2s;
+  transition: all 0.12s ease-in-out;
 }
+
 .spin-enter,
 .spin-leave-to {
-  opacity: 0;
+  transform: scaleX(0);
 }

@@ -18,6 +18,14 @@ export default {
       type: String,
       default: () => ""
     },
+    hoverText: {
+      type: String,
+      default: () => ""
+    },
+    hoverIcon: {
+      type: String,
+      default: () => "clock"
+    },
     icon: {
       type: String,
       default: () => "play"
@@ -34,12 +42,28 @@ export default {
       type: String,
       default: () => ""
     }
+  },
+  computed: {
+    isTouchDevice() {
+      return "ontouchstart" in window;
+    }
+  },
+  data() {
+    return {
+      onHover: false
+    };
   }
 };
 </script>
 
 <template>
-  <article class="card" @click="$emit('card-click')" draggable="false">
+  <article
+    class="card"
+    @click="$emit('card-click')"
+    draggable="false"
+    @mouseenter="onHover = true"
+    @mouseleave="onHover = false"
+  >
     <slot name="card-header">
       <div class="card__header">
         <h2 class="card__header__text">{{ title }}</h2>
@@ -62,12 +86,18 @@ export default {
         >
           <icon v-if="icon" :icon-name="icon" size="lg" />
         </button>
-        <img
-          v-if="img"
-          :title="imgAlt"
-          :src="`../../../images/${img}.png`"
-          :alt="imgAlt"
-        />
+        <transition name="spin" mode="out-in">
+          <img
+            v-if="img && !onHover && !isTouchDevice"
+            :title="imgAlt"
+            :src="`../../../images/${img}.png`"
+            :alt="imgAlt"
+          />
+          <div class="card__footer__icon" v-else>
+            <icon icon-name="clock" />
+            <span>{{ hoverText }}</span>
+          </div>
+        </transition>
       </div>
     </slot>
   </article>

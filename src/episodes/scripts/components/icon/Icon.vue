@@ -1,5 +1,6 @@
 <script>
 import Play from "./icons/play.vue";
+import Clock from "./icons/clock.vue";
 
 export default {
   name: "icon",
@@ -19,7 +20,8 @@ export default {
     }
   },
   components: {
-    play: Play
+    play: Play,
+    clock: Clock
   },
   computed: {
     getSize() {

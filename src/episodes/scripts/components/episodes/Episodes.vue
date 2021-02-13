@@ -60,6 +60,8 @@ export default {
         :img="card.img"
         :img-alt="card.imgAlt"
         :button-alt="card.buttonAlt"
+        hover-icon="clock"
+        :hover-text="card.duration"
         @button-click="goToPodcast"
       />
     </card-carousel>
