@@ -73,7 +73,7 @@ export default {
 <template>
   <article
     class="card"
-    @click="$emit('card-click')"
+    @click="$emit('card-click', id)"
     draggable="false"
     @mouseenter="onHover = true"
     @mouseleave="onHover = false"

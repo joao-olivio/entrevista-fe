@@ -27,14 +27,13 @@ export default {
   },
   methods: {
     goToPodcast(/* id */) {
-      // pretending we have a navigation here,
+      // pretending we have a navigation and vue-router here,
       // there would be something like:
       // this.$router.push({ name: "podcast", params: { id } })
     },
-    goToAllEpisodes(/* selectedTab */) {
-      // also pretending we have a navigation here,
-      // there would be something like:
-      // this.$router.push({ name: "episodes", params: { type: selectedTab } })
+    goToAllEpisodes() {
+      // also pretending we have vue-router:
+      // this.$router.push({ name: "episodes", params: { type: this.selectedTab } })
     },
     generateDelay(index) {
       const value = 0.2 * (index + 1);
