@@ -77,6 +77,7 @@ export default {
         hover-icon="clock"
         :hover-text="card.duration"
         @button-click="goToPodcast"
+        @card-click="goToPodcast"
       />
     </card-carousel>
     <div class="episodes__footer">

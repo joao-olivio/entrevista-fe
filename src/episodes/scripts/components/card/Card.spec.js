@@ -36,4 +36,25 @@ describe("Card", () => {
     expect(wrapper.vm.imgAlt).toBeDefined();
     expect(wrapper.vm.buttonAlt).toBeDefined();
   });
+
+  it("should define its hover state properly", () => {
+    const card = wrapper.find("article");
+    card.trigger("mouseenter");
+
+    expect(wrapper.vm.onHover).toBe(true);
+  });
+
+  it("should emit click events properly", () => {
+    expect(wrapper.emitted("card-click")).toBeFalsy();
+    const card = wrapper.find("article");
+    card.trigger("click");
+
+    expect(wrapper.emitted("card-click")).toBeTruthy();
+
+    expect(wrapper.emitted("button-click")).toBeFalsy();
+    const button = wrapper.find("button");
+    button.trigger("click");
+
+    expect(wrapper.emitted("button-click")).toBeTruthy();
+  });
 });
