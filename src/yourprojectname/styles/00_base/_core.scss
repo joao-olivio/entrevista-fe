@@ -1,11 +1,32 @@
+html {
+  font-size: 10px;
+  @media (min-width: $sm) {
+    font-size: 12px;
+  }
+  @media (min-width: $lg) {
+    font-size: 16px;
+  }
+  @media (min-width: $xl) {
+    font-size: 18px;
+  }
+}
+
 body {
   min-height: 100vh;
   min-width: 100vw;
   background-color: $light-grey;
+  background-color: #F9F9F9;
   font-family: $font-regular;
+  overflow-x: hidden;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+  border: 0 solid #e2e8f0;
 }
 
 .container {
-  max-width: 90vw;
+  max-width: 1280px;
   margin: auto;
+  padding: 0 1rem;
 }

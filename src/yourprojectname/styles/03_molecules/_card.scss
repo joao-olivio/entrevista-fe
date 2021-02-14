@@ -1,0 +1,37 @@
+.card {
+  width: 260px;
+  min-width: 260px;
+  height: 340px;
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 0px 20px #0000001A;
+  border-radius: 4px;
+  background: #fff;
+  margin: 0 1.6rem;
+  transition: .3s;
+  &__footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &:hover{
+    box-shadow: 0px 0px 20px #0000007d;
+  }
+  &__title {
+    font-size: 30px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  &__author {
+    font-size: 18px;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+  &__author-position {
+    font-size: 16px;
+    color: #777777;
+  }
+}

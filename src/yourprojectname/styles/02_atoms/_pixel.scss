@@ -1,6 +1,16 @@
 .pixel {
-  background: #181425;
-  width: 40px;
-  height: 40px;
   border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 35rem;
+  height: 35rem;
+  max-width: 35rem;
+  max-height: 35rem;
+  display: none;
+  background-color: #5cd0fe;
+  z-index: 2;
+  @media (min-width: $lg){
+    display: block;
+  }
 }

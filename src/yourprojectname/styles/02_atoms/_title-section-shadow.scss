@@ -1,0 +1,12 @@
+.title-shadow {
+  font-size: 6rem;
+  font-weight: 800;
+  top: 2.2rem;
+  color: #F0F0F0;
+  max-width: 100%;
+  z-index: 1;
+  position: absolute;
+  @media (min-width: $lg) {
+    margin-left: 10rem;
+  }
+}

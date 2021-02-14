@@ -2,9 +2,11 @@ import Vue from "vue";
 
 // Import Components
 import HireMePlease from "./components/hire-me-please/hire-me-please.vue";
+import Episodes from "./components/episodes/episodes.vue";
 
 // Vue Declaration for Components
 Vue.component(HireMePlease.name, HireMePlease);
+Vue.component(Episodes.name, Episodes);
 
 // Import Directives
 import { backgroundDirective, ellipsis } from "./directives";
