@@ -68,8 +68,12 @@
         display: none;
       }
 
-      @media screen and (max-height: 780px) {
+      @media screen and (max-height: 780px) and (max-width: $breakpoint-lg) {
         top: 148px;
+      }
+
+      @media screen and (max-height: 780px) and (min-width: $breakpoint-lg) {
+        top: 177px;
       }
     }
   }
