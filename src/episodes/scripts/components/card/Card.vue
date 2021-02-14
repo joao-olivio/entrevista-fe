@@ -1,4 +1,5 @@
 <script>
+import truncate from "lodash/truncate";
 export default {
   name: "card",
   props: {
@@ -52,6 +53,19 @@ export default {
     return {
       onHover: false
     };
+  },
+  methods: {
+    // Mirroring the ellipsis directive implementation
+    // so that it won't lose reactivity by replacing innerHTML.
+    truncateString(string, limit = 50) {
+      const dots = "...";
+      return string.length > limit
+        ? truncate(string, {
+            length: limit - dots.length,
+            omission: dots
+          })
+        : string;
+    }
   }
 };
 </script>
@@ -66,7 +80,9 @@ export default {
   >
     <slot name="card-header">
       <div class="card__header">
-        <h2 class="card__header__text">{{ title }}</h2>
+        <h2 class="card__header__text" :title="title">
+          {{ truncateString(title, 35) }}
+        </h2>
       </div>
     </slot>
     <slot name="card-body">
