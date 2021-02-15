@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-  <div class="tab-bar">
+  <nav class="tab-bar">
     <tab-item
       class="tab-bar__items"
       v-for="(item, index) in items"
@@ -36,5 +36,5 @@ export default {
     >
       {{ item }}
     </tab-item>
-  </div>
+  </nav>
 </template>

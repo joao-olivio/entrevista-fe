@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <div class="page-title">
+  <header class="page-title">
     <h1
       :class="[
         'page-title__main-text',
@@ -36,5 +36,5 @@ export default {
     >
       {{ shadowText }}
     </span>
-  </div>
+  </header>
 </template>
