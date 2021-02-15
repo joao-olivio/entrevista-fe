@@ -1,0 +1,10 @@
+.episodes {
+  display: flex;
+  overflow: auto;
+  margin-top: 2rem;
+  padding: 20px 0;
+  @media (min-width: $lg){
+    justify-content: center;
+    overflow: unset;
+  }
+}

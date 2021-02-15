@@ -1,0 +1,30 @@
+.tab {
+  font-size: .8rem;
+  text-decoration: none;
+  color: #111111;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 1rem;
+  display: none;
+  width: fit-content;
+  cursor: pointer;
+  @media (min-width: $lg) {
+    display: block;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    width: 0px;
+    left: -2px;
+    top: 1.4rem;
+    height: 2px;
+    background: #111111;
+    transition: .3s;
+  }
+  &:hover, &.active {
+    &:after {
+      width: calc(100% + 6px);
+    }
+  }
+}

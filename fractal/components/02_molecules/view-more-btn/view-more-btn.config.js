@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'hire cta',
+  title: 'view-more-btn',
   status: 'ready',
   context: {
     label: 'View more',

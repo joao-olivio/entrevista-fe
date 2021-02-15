@@ -1,7 +1,7 @@
 module.exports = {
-  title: 'hire cta',
+  name: 'Title',
   status: 'ready',
   context: {
-    label: 'View more',
-  },
+    title: 'Title'
+  }
 }
