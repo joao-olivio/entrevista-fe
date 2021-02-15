@@ -1,0 +1,46 @@
+.card-carousel {
+  display: flex;
+  width: fit-content;
+  overflow-x: auto;
+  max-width: 80vw;
+  scrollbar-width: thin;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    display: grid;
+    grid-auto-flow: column;
+    grid-row: 1;
+  }
+
+  &::-webkit-scrollbar {
+    height: 8px;
+    outline: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.09);
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin-left: 10px;
+  }
+
+  &--touch {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &::-webkit-scrollbar-track {
+      display: none;
+    }
+  }
+
+  @media screen and(max-width: $breakpoint-sm) {
+    > article {
+      min-width: 240px;
+      width: calc(75vw - 40px);
+      height: 100%;
+    }
+  }
+}

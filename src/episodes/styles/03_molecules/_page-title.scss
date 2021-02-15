@@ -1,0 +1,64 @@
+@mixin animate {
+  animation: fade 1.8s ease-in-out 1;
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.page-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+  user-select: none;
+
+  &__main-text {
+    @include animate();
+    color: $black-text;
+    font-size: 80px;
+    font-weight: bolder;
+    z-index: $layer-3;
+
+    &--no-animation {
+      animation: none;
+    }
+
+    @media screen and (max-width: $breakpoint-lg) {
+      font-size: 60px;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+      font-size: 40px;
+    }
+  }
+  &__shadow-text {
+    @include animate();
+    position: absolute;
+    font-size: 200px;
+    left: 55px;
+    color: $light-grey-text;
+    z-index: $layer-1;
+    font-weight: bolder;
+
+    &--no-animation {
+      animation: none;
+    }
+
+    @media screen and (max-width: $breakpoint-lg) {
+      font-size: 100px;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+      font-size: 74px;
+      left: -35px;
+    }
+  }
+}

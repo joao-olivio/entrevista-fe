@@ -1,0 +1,16 @@
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  box-sizing: border-box;
+  background-color: $light-grey;
+  font-family: $font-regular;
+}
+
+.container {
+  max-width: 90vw;
+  margin: auto;
+}
+
+* {
+  box-sizing: border-box;
+}

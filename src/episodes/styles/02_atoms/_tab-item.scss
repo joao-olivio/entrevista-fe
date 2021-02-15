@@ -1,0 +1,88 @@
+@mixin scale-up {
+  animation: scaleup 0.3s ease-in-out 1;
+
+  @keyframes scaleup {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+}
+
+@mixin scale-down($color) {
+  animation: scaledown 0.3s ease-in-out 1;
+  @keyframes scaledown {
+    from {
+      transform: scaleX(1);
+      background-color: $color !important;
+    }
+    to {
+      transform: scaleX(0);
+    }
+  }
+}
+
+.tab-item {
+  position: relative;
+  color: $black-text;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    @include scale-down($black-text);
+
+    will-change: background-color, visibility;
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -2px;
+    width: 100%;
+    height: 3px;
+    transition: background-color 0.4s ease, visibility 0.2s ease;
+    visibility: hidden;
+  }
+
+  &::before {
+    @include scale-down($light-grey);
+  }
+
+  &:focus,
+  &:hover {
+    &::before {
+      @include scale-up();
+      background-color: $light-grey;
+      visibility: visible;
+      transition: none;
+    }
+  }
+
+  &--selected {
+    &::after {
+      @include scale-up();
+      visibility: visible;
+      background-color: $black-text;
+      transition: none;
+    }
+  }
+
+  &:hover {
+    color: $black-text;
+    &::before {
+      @include scale-up();
+      z-index: $layer-5;
+      background-color: $light-grey;
+    }
+  }
+}
+
+@media (hover: none) {
+  .tab-item::before {
+    background-color: $black-text !important;
+  }
+}

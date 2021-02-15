@@ -1,0 +1,121 @@
+.episodes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 0 50px;
+  max-width: 100vw;
+  background-color: $bg-color;
+  overflow: hidden;
+
+  @media screen and (max-width: $breakpoint-md) {
+    align-items: flex-start;
+  }
+
+  &__page-title {
+    position: relative;
+    padding-top: 92px;
+
+    @media screen and (max-height: 780px) {
+      padding-top: 65px;
+    }
+
+    &::before {
+      top: 31px;
+      left: -429px;
+      border-radius: 100%;
+      content: "";
+      position: absolute;
+      width: 550px;
+      height: 550px;
+      background-color: $bg-color-blue;
+      z-index: $layer-2;
+
+      @media screen and (max-width: $breakpoint-lg) {
+        width: 520px;
+        height: 520px;
+        left: -416px;
+      }
+
+      @media screen and (max-width: $breakpoint-md) {
+        display: none;
+        padding-top: 0;
+      }
+
+      @media screen and (max-height: 780px) {
+        top: 2px;
+      }
+    }
+
+    &::after {
+      top: 202px;
+      left: 32px;
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 4px;
+      background-color: $bg-color-blue;
+      z-index: $layer-2;
+
+      @media screen and (max-width: $breakpoint-lg) {
+        width: 365px;
+        top: 177px;
+      }
+
+      @media screen and (max-width: $breakpoint-md) {
+        display: none;
+      }
+
+      @media screen and (max-height: 780px) and (max-width: $breakpoint-lg) {
+        top: 148px;
+      }
+
+      @media screen and (max-height: 780px) and (min-width: $breakpoint-lg) {
+        top: 177px;
+      }
+    }
+  }
+
+  &__tabs {
+    padding-top: 28px;
+    z-index: $layer-3;
+
+    @media screen and (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+
+  &__carousel {
+    padding: 45px 10px 15px 10px;
+  }
+
+  &__cards {
+    z-index: $layer-3;
+    user-select: none;
+    cursor: pointer;
+    &:not(:last-of-type) {
+      margin-right: 32px;
+    }
+  }
+
+  &__footer {
+    padding: 77px 0 15px 0;
+    align-self: center;
+
+    @media screen and (max-height: 780px) {
+      padding-top: 17px;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+      align-self: baseline;
+      padding-top: 17px;
+      button {
+        min-width: 75vw;
+        border: none;
+        background-color: $bg-color-blue;
+      }
+    }
+  }
+}
