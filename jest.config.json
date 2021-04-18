@@ -43,6 +43,6 @@
     ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
   },
   "reporters": ["default", ["jest-junit", { "output": "coverage/junit.xml" }]],
-  "coverageReporters": ["text", "lcov", "cobertura"],
+  "coverageReporters": ["text", "lcovonly", "cobertura"],
   "testURL": "http://localhost"
 }
