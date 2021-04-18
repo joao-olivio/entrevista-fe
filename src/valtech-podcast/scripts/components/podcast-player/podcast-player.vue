@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import PlayBtn from "../play-btn/play-btn.vue"
-import Waveform from "../waveform/waveform.vue"
+import PlayBtn from "../play-btn/play-btn.vue";
+import Waveform from "../waveform/waveform.vue";
 
 export default {
   name: "podcast-player",
@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     computedInfo() {
-      return ""
+      return "";
     }
   }
 };
