@@ -1,0 +1,11 @@
+<play-btn
+  size="{{size}}"
+  {{#if color}}color="{{color}}"{{/if}}
+  {{#if progress}}
+    :progress="{{progress}}"
+    have-progress
+  {{/if}}
+  {{#if progressColor}}
+    progress-color="{{progressColor}}"
+  {{/if}}
+/>
