@@ -1,0 +1,52 @@
+.btn {
+  position: relative;
+  font-family: $font-regular;
+  font-weight: 700;
+  background: $white !important;
+  border: 2px solid $black !important;
+  color: $black;
+  text-transform: uppercase;
+  padding: rem(10px 30px);
+  min-height: rem(50px);
+  min-width: rem(165px);
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: rgba(26, 101, 167, 0.1);
+    transform: skewX(35deg) translateX(-112%);
+    transition: transform 0.3s ease-out;
+  }
+
+  &:active {
+    &::before {
+      transform: skewX(35deg) translateX(112%);
+      transition: 0s;
+    }
+  }
+
+  &:focus-within {
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
+  }
+
+  &--icon {
+    font-size: rem(24px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > *:first-child {
+      padding-right: rem(10px);
+    }
+  }
+}

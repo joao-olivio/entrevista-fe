@@ -1,0 +1,8 @@
+<carousel :per-page-custom="{{perPage}}" :pagination-enabled={{pagination}} :navigation-enabled={{navigation}}
+    :navigation-click-target-size={{navigationSize}}>
+    {{#each cards}}
+    <slide>
+        {{> '@card' }}
+    </slide>
+    {{/each}}
+</carousel>

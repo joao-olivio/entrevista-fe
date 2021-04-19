@@ -1,0 +1,28 @@
+.section-title {
+    
+& .pixel {
+    display: none;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.section-title-text,
+.section-title-line {
+    margin-left: 35px;
+}
+
+    @media (min-width: 1200px) {
+        .section-title-text,
+        .section-title-line {
+        margin-left: 0px;
+        }
+
+        & .pixel {
+        display: block;
+        position: absolute;
+        left: 10vw;
+        top: -50px;
+        z-index: -100;
+        }
+    }
+}

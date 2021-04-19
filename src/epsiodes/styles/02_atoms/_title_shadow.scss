@@ -1,0 +1,19 @@
+.section-title-shadow {
+    color: #F0F0F0;
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: $font-regular;
+    letter-spacing: -3.7px;
+    line-height: 4rem;
+    margin-top: 5px;
+    position: absolute;
+    text-align: center;
+    z-index: -200;
+
+    @media (min-width: 1200px) {
+        letter-spacing: -10px;
+        font-size: 11rem;
+        line-height: 18rem;
+        margin-top: -75px;
+    }
+}
