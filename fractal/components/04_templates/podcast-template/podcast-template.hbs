@@ -1,0 +1,14 @@
+<div class="container podcast-template">
+    <div class="row">
+        {{render '@section-title'}}
+    </div>
+    <div class="row card-carousel">
+        {{render '@card-carousel'}}
+    </div>
+    <div class="row card-tabs">
+        {{render '@card-tabs'}}
+    </div>
+    <div class="row">
+        {{> '@cta' label=this.ctaLabel href=this.ctaHref}}
+    </div>
+</div>
