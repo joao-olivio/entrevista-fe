@@ -8,8 +8,8 @@ module.exports = {
     websiteDirectory: './build/Website/',
     featureDirectory: 'src/',
   },
-  currentWebsite: 'yourprojectname',
-  fractalExternalBuildPrefix: '/yourprojectname/',
+  currentWebsite: 'valtech-podcast',
+  fractalExternalBuildPrefix: '/valtech-podcast/',
   autoPrefixerBrowsers: ['last 2 versions', 'ie >= 10', 'Safari >= 9', 'iOS >= 8'],
   bundle: {
     cssBundleName: 'bundle.css',

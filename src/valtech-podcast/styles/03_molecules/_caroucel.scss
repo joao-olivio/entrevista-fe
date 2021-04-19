@@ -1,0 +1,19 @@
+.caroucel {
+  padding: 8px 40px;
+  overflow-x: auto;
+  width: 100%;
+  box-sizing: border-box;
+  @include responsive-settings((1024px: 100%), width, ());
+  @include responsive-settings((1024px: 32px 0), padding, ());
+  .caroucel-wrapper {
+    &> span {
+      display: block;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+    .caroucel-item {
+      float: left;
+    }
+  }
+}

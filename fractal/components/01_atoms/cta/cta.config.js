@@ -1,6 +1,6 @@
 module.exports = {
   title: '',
-  status: 'ready',
+  status: 'wip',
   context: {
     label: 'CTA'
   }

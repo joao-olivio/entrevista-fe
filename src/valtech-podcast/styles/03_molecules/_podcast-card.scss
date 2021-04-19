@@ -1,0 +1,51 @@
+.card {
+  box-shadow: 0px 0px 8px #0000001A;
+  background-color: $white;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: box-shadow .2s ease;
+  position: relative;
+  z-index: 1;
+  &:hover {
+    box-shadow: 0px 0px 20px #0000001A;
+  }
+  &.podcast {
+    max-width: 240px;
+    height: 282px;
+    padding: 32px;
+    align-content: space-between;
+    @extend .row;
+    @include responsive-settings((1024px: 262px), max-width, ());
+    @include responsive-settings((1024px: 342px), height, ());
+    @include responsive-settings((1024px: 32px), padding, ());
+    .card-infos, .card-actions {
+      @extend .col;
+      @extend .col-12;
+    }
+    .card-actions {
+      .podcast-time {
+        float: right;
+        height: 100%;
+        align-items: center;
+        @extend .row;
+        .clock-icon, .podcast-duration {
+          @extend .col;
+        }
+        .clock-icon {
+          margin-right: 10px;
+          height: 16px;
+          width: 16px;
+          max-width: 16px;
+          @include responsive-settings((1024px: 24px !important), width, ());
+          @include responsive-settings((1024px: 24px !important), max-width, ());
+          @include responsive-settings((1024px: 24px !important), height, ());
+        }
+      }
+      .play-btn {
+        @include responsive-settings((1024px: 40px !important), width, ());
+        @include responsive-settings((1024px: 40px !important), height, ());
+      }
+    }
+  }
+}

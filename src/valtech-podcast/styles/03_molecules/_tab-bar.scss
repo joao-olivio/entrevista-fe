@@ -1,0 +1,29 @@
+.tab-wrapper {
+  @extend .row;
+  justify-content: center;
+  .tab-item {
+    padding: 13px 16px;
+    z-index: 1;
+    &:after {
+      content: "";
+      height: 2px;
+      position: absolute;
+      width: calc(100% - 32px);
+      left: 16px;
+      bottom: 0;
+      background-color: $medium-grey;
+      transform: scaleX(0);
+      transition: transform .2s ease, background-color .2s ease;
+    }
+    &.active {
+      &:after {
+        background-color: $dark-grey;
+      }
+    }
+    &.active, &:hover {
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

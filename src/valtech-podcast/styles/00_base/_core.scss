@@ -1,0 +1,17 @@
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: $background;
+  font-family: $font-regular;
+  font-size: 14px;
+  overflow-x: hidden;
+  @include responsive-settings((1024px: 16px), font-size, ())
+}
+
+.container {
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+  box-sizing: border-box;
+  @include responsive-settings((1024px: 1268px), max-width, ())
+}

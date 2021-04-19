@@ -1,0 +1,70 @@
+.block {
+  background-color: white;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: rem(40px);
+  color: $dark-grey;
+  letter-spacing: -1.5px;
+  line-height: 36px;
+  font-weight: map-get($font-weights, 'extraBold');
+  @include responsive-settings((1024px: rem(80px)), font-size, ());
+  @include responsive-settings((1024px: 74px), line-height, ());
+  &.shadow {
+    font-size: 74px;
+    letter-spacing: -1.5px;
+    line-height: 70px;
+    color: $shadow-color;
+    @include responsive-settings((1024px: 200px), font-size, ());
+    @include responsive-settings((1024px: -10px), letter-spacing, ());
+    @include responsive-settings((1024px: 190px),  line-height, ());
+  }
+}
+
+.tab-item {
+  font-size: 15px;
+  color: $dark-grey;
+  letter-spacing: 2.31px;
+  text-transform: uppercase;
+  font-weight: map-get($font-weights, 'bold');
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  &:hover {
+    color: $dark-grey;
+  }
+}
+
+.card-title {
+  font-size: 28px;
+  color: $black;
+  text-transform: uppercase;
+  font-weight: map-get($font-weights, 'light');
+  padding: 0;
+  margin-bottom: 8px;
+  @include responsive-settings((1024px: 16px), margin-bottom, ());
+  @include responsive-settings((1024px: 7px 0), padding, ());
+}
+
+.creator-name {
+  font-size: 16px;
+  color: $black;
+  font-weight: map-get($font-weights, 'semiBold');
+  margin-bottom: 4px;
+}
+
+.creator-title {
+  font-size: 13px;
+  color: $grey;
+  font-weight: map-get($font-weights, 'regular');
+}
+
+.podcast-duration {
+  font-size: 12px;
+  color: $dark-grey;
+  font-weight: map-get($font-weights, 'regular');
+  height: 12px;
+  @include responsive-settings((1024px: 14px), font-size, ());
+  @include responsive-settings((1024px: 14px), height, ());
+}

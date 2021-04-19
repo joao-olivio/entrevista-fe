@@ -1,0 +1,35 @@
+$grid-columns: 12;
+
+.container {
+  width: 100%;
+  padding: 12px 0;
+  box-sizing: border-box;
+  @include responsive-settings((1024px: auto), margin-right, ());
+  @include responsive-settings((1024px: auto), margin-left, ());
+  @include responsive-settings((1024px: 12px), padding, ());
+  @include responsive-settings((1024px: 1024px), max-width, ());
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+@for $i from 1 through $grid-columns{ 
+  .col-#{$i} {
+    flex: 0 0 100% / $grid-columns * $i;
+    max-width: 100% / $grid-columns * $i;
+  }
+}

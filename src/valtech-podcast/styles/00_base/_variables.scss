@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// Colors
+// -----------------------------------------------------------------------------
+
+$black: #000000;
+$dark-grey: #111111;
+$grey: #777777;
+$medium-grey: #9e9e9e;
+$light-grey: #F0F0F0;
+$shadow-color: #F0F0F0;
+$background: #F9F9F9;
+$white: #ffffff;
+$primary: #5CD0FE;
+
+$alert-red: #d80c0c;
+$success-green: #9eb356;
+$info-orange: #e66c10;
+
+$font-weights: (
+  'light': 300,
+  'regular': 400,
+  'semiBold': 600,
+  'bold': 700,
+  'extraBold': 800
+) !default;
