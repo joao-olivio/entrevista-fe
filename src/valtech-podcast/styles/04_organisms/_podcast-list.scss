@@ -4,7 +4,7 @@
     padding: 32px 40px;
     .btn {
       width: 100%;
-      @include responsive-settings((1024px: auto), width, ());
+      @include responsive-settings((520px: auto), width, ());
     }
   }
 }

@@ -1,8 +1,9 @@
 <template>
   <div class="container podcast-list">
-    <tab-bar v-if="screenHeight >= 1024" v-model="tab" :tabs="tabs" />
+    <tab-bar v-if="screenWidth >= 1024" v-model="tab" :tabs="tabs" />
     <Caroucel
       :items="podcasts"
+      :item-height="itemHeight"
       :item-width="itemWidth"
       :item-margin="itemMargin"
     >
@@ -40,6 +41,9 @@ export default {
     ...mapState(["screenWidth", "screenHeight"]),
     tabs() {
       return ["all", "development", "design", "project management"];
+    },
+    itemHeight() {
+      return this.screenWidth < 1024 ? 282 : 342;
     },
     itemWidth() {
       return this.screenWidth < 1024 ? 240 : 262;

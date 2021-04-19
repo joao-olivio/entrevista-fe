@@ -13,13 +13,15 @@
   }
   .section-title {
     &.title {
-      width: 72% !important;
+      width: 168px;
       @include responsive-settings((1024px: fit-content), width, ());
     }
     &.shadow {
-      line-height: 100px !important;
+      line-height: 100px;
+      max-width: 486px;
       @include responsive-settings((1024px: fit-content), width, ());
-      @include responsive-settings((1024px: 70px), line-height, ());
+      @include responsive-settings((1024px: 100%), max-width, ());
+      @include responsive-settings((1024px: 190px), line-height, ());
     }
   }
 }

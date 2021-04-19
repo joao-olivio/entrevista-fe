@@ -2,7 +2,12 @@
   <div class="caroucel">
     <div
       class="caroucel-wrapper"
-      :style="[{ width: wrapperWidth ? wrapperWidth + 'px' : '100%' }]"
+      :style="[
+        {
+          width: wrapperWidth ? wrapperWidth + 'px' : '100%',
+          height: itemHeight + 'px'
+        }
+      ]"
     >
       <transition-group name="fade-transition" mode="out-in">
         <div
@@ -33,6 +38,10 @@ export default {
     uniqueProp: {
       type: String,
       default: "id"
+    },
+    itemHeight: {
+      type: Number,
+      default: 80
     },
     itemWidth: {
       type: Number,

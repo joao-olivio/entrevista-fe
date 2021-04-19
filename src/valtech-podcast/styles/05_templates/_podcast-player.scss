@@ -25,27 +25,54 @@
     float: left;
     @include responsive-settings((1024px: 800px), width, ());
     #waveform {
-      height: 65px;
+      height: 60px;
       width: 100%;
       background-color: $white;
       border-left: 1px solid $dark-grey;
+      @include responsive-settings((1024px: 65px), height, ());
     }
     .podcast-info {
       @extend .row;
-      height: 35px;
+      height: 40px;
       width: 100%;
       background-color: $dark-grey;
       color: $white;
       align-items: center;
       justify-content: space-between;
       padding: 0 10px;
+      overflow: hidden;
       .title {
         font-weight: map-get($font-weights, 'semiBold');
+        white-space: nowrap;
+        animation: slide 25s linear infinite;
+        @include responsive-settings((1024px: none), animation, ());
+        @include responsive-settings((1024px: 21px), height, ());
       }
       .time {
         font-size: 12px;
         font-weight: map-get($font-weights, 'light');
       }
     }
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  10% {
+    transform: translateX(0%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-105%);
+  }
+  50.01% {
+    opacity: 0;
+    transform: translateX(105%);
+  }
+  50.02% {
+    opacity: 1;
+    transform: translateX(105%);
   }
 }
