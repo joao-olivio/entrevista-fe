@@ -1,0 +1,15 @@
+.section-title-text {
+  color: $black;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: $font-regular;
+  line-height: 2rem;
+  text-align: left;
+
+  @media (min-width: 1200px) {
+    font-size: 4rem;
+    line-height: 5rem;
+    text-align: center;
+    width: 100%;
+  }
+}

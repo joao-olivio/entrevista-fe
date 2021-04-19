@@ -1,0 +1,39 @@
+.hire-me-please {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: rem(350px);
+  font-size: rem(24px);
+
+  form {
+    width: 100%;
+    text-align: center;
+
+    & > *:not(.btn) {
+      margin: rem(20px);
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      background: transparent;
+      border: 2px solid black;
+      min-height: rem(40px);
+    }
+
+    button {
+      margin: rem(20px) auto;
+    }
+
+    .errors-log {
+      color: $alert-red;
+      font-size: rem(16px);
+    }
+  }
+
+  .answer {
+    text-align: center;
+    height: 40px;
+  }
+}

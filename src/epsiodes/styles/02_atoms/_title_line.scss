@@ -1,0 +1,15 @@
+.section-title-line {
+    background: #5CD0FE 0% 0% no-repeat padding-box;
+    border: 0;
+    float: left;
+    height: 2px;
+    transform: translateY(-500%);
+    width: 17rem;
+
+    @media (min-width: 1200px) {
+        height: 4px;
+        margin-top: 0px;
+        transform: none;
+        width: 100%;
+    }
+}
