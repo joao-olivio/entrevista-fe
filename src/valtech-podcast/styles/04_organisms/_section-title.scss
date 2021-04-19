@@ -1,0 +1,39 @@
+.section {
+  &.title-subsection {
+    position: relative;
+    overflow: hidden;
+    .row {
+      margin: 0 40px;
+      @include responsive-settings((1024px: center), justify-content, ());
+      @include responsive-settings((1024px: 0), margin, ());
+    }
+    .container {
+      .section-title {
+        z-index: 1;
+        position: relative;
+        width: fit-content;
+        @include responsive-settings((1024px: center), text-align, ());
+        &.shadow {
+          position: absolute;
+          top: -100px;
+          left: 0;
+          z-index: 0;
+          @include responsive-settings((1024px: -75px), top, ());
+          @include responsive-settings((1024px: 0), left, ());
+        }
+        &.divider {
+          &:after {
+            content: "";
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            bottom: -18px;
+            left: 0;
+            background-color: $primary;
+            @include responsive-settings((1024px: 4px), height, ());
+          }
+        }
+      }
+    }
+  }
+}

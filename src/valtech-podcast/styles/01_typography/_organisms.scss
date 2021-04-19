@@ -7,23 +7,32 @@
   font-size: 40px;
   color: $dark-grey;
   letter-spacing: -1.5px;
+  line-height: 36px;
   font-weight: map-get($font-weights, 'extraBold');
-  @include responsive-settings((1024: 80px), font-size, ());
+  @include responsive-settings((1024px: 80px), font-size, ());
+  @include responsive-settings((1024px: 74px), line-height, ());
   &.shadow {
     font-size: 74px;
     letter-spacing: -1.5px;
+    line-height: 70px;
     color: $shadow-color;
-    @include responsive-settings((1024: 200px), font-size, ());
-    @include responsive-settings((1024: -10px), letter-spacing, ());
+    @include responsive-settings((1024px: 200px), font-size, ());
+    @include responsive-settings((1024px: -10px), letter-spacing, ());
   }
 }
 
 .tab-item {
   font-size: 15px;
+  color: $dark-grey;
   letter-spacing: 2.31px;
   text-transform: uppercase;
   font-weight: map-get($font-weights, 'bold');
   text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  &:hover {
+    color: $dark-grey;
+  }
 }
 
 .card-title {
@@ -31,7 +40,10 @@
   color: $black;
   text-transform: uppercase;
   font-weight: map-get($font-weights, 'light');
+  padding: 0;
   margin-bottom: 8px;
+  @include responsive-settings((1024px: 16px), margin-bottom, ());
+  @include responsive-settings((1024px: 7px 0), padding, ());
 }
 
 .creator-name {
@@ -43,7 +55,7 @@
 
 .creator-title {
   font-size: 13px;
-  color: $medium-grey;
+  color: $grey;
   font-weight: map-get($font-weights, 'regular');
 }
 
@@ -51,4 +63,7 @@
   font-size: 12px;
   color: $dark-grey;
   font-weight: map-get($font-weights, 'regular');
+  height: 12px;
+  @include responsive-settings((1024px: 14px), font-size, ());
+  @include responsive-settings((1024px: 14px), height, ());
 }

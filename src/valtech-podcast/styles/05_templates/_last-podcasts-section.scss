@@ -1,0 +1,25 @@
+.last-podcasts {
+  .blue-circle {
+    height: 554px;
+    width: 554px;
+    border-radius: 50%;
+    background-color: $primary;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    z-index: 1;
+    display: none;
+    @include responsive-settings((1024px: block), display, ());
+  }
+  .section-title {
+    &.title {
+      width: 72% !important;
+      @include responsive-settings((1024px: fit-content), width, ());
+    }
+    &.shadow {
+      line-height: 100px !important;
+      @include responsive-settings((1024px: fit-content), width, ());
+      @include responsive-settings((1024px: 70px), line-height, ());
+    }
+  }
+}
