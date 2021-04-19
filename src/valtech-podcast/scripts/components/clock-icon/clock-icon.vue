@@ -3,9 +3,11 @@
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     :width="size"
+    :max-width="size"
     :height="size"
     viewBox="0 0 5.2916665 5.2916668"
     id="svg8"
+    class="clock-icon"
   >
     <g id="layer1">
       <g id="g858">

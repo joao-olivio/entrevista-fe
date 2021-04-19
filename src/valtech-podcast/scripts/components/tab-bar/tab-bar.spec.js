@@ -29,7 +29,7 @@ describe("TabBar", () => {
   });
 
   it("change tab on click", async () => {
-    const tabItem = wrapper.findAll("tab-item").at(1);
+    const tabItem = wrapper.findAll(".tab-item").at(1);
     tabItem.trigger("click");
 
     await wrapper.vm.$nextTick();

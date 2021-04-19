@@ -36,9 +36,4 @@ describe("PodcastList", () => {
   it("run find action on creation", () => {
     expect(actions.findPodcasts).toHaveBeenCalled();
   });
-
-  it("re run find on tab change", () => {
-    wrapper.setData({ tab: 1 })
-    expect(actions.findPodcasts).toHaveBeenLastCalledWith('development');
-  });
 });

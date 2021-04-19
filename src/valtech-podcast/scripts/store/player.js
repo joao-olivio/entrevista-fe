@@ -39,7 +39,9 @@ const mutations = {
 
 const actions = {
   playPodcast({ commit }, podcast) {
-    commit("LOAD_PODCAST", podcast);
+    if (podcast) {
+      commit("LOAD_PODCAST", podcast);
+    }
     commit("SET_STATUS", "playing");
   },
   stopPodcast({ commit }) {
@@ -55,7 +57,7 @@ const actions = {
 };
 
 export default {
-  namespace: true,
+  namespaced: true,
   state,
   mutations,
   actions

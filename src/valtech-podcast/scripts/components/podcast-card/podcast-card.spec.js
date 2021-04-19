@@ -18,7 +18,7 @@ describe("PodcastCard", () => {
   beforeEach(() => {
     modules = {
       player: {
-        namespace: true,
+        namespaced: true,
         state,
         mutations: PlayerModule.mutations,
         actions: {
@@ -38,6 +38,7 @@ describe("PodcastCard", () => {
         creatorName: "Fake creator",
         creatorTitle: "Front-end Developer"
       },
+      store,
       localVue
     });
   });
@@ -52,14 +53,15 @@ describe("PodcastCard", () => {
   });
 
   it("play podcast on play button click", () => {
-    const playBtn = wrapper.find({ ref: 'playBtn' });
+    const playBtn = wrapper.findComponent({ ref: 'playBtn' });
     playBtn.trigger('click');
     expect(modules.player.actions.playPodcast).toHaveBeenCalled();
   });
 
   it("stop podcast on stop button click", () => {
-    const playBtn = wrapper.find({ ref: 'playBtn' });
-    store.commit('LOAD_PODCAST', { id: 4 });
+    const playBtn = wrapper.findComponent({ ref: 'playBtn' });
+    store.commit('player/LOAD_PODCAST', { id: 4 });
+    store.commit('player/SET_STATUS', 'playing');
     playBtn.trigger('click');
     expect(modules.player.actions.stopPodcast).toHaveBeenCalled();
   });

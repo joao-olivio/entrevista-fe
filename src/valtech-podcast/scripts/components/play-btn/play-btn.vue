@@ -59,7 +59,7 @@ export default {
     },
     progressColor: {
       type: String,
-      default: "#ff0000"
+      default: "#5CD0FE"
     },
     state: {
       type: String,
@@ -92,9 +92,8 @@ export default {
         };
       } else if (this.state === "stop") {
         return {
-          right:
-            "m 21.921141,26.856511 4.841422,0.0029 0,-13.70854 -4.854566,-0.0084 z",
-          left: "M 12.399049,13.144607 V 26.855393 H 22 V 13.144607 Z"
+          right: "M 21.921141,27.875 28,27.875 v -15.75 h -6.092003 z",
+          left: "m 12.125,12.125 v 15.75 H 22 v -15.75 z"
         };
       }
     }

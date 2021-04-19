@@ -1,13 +1,19 @@
 import { shallowMount, createLocalVue } from "@vue/test-utils";
-import Waveform from "./waveform";
+import Caroucel from "./caroucel";
 
 const localVue = createLocalVue();
 
-describe("Waveform", () => {
+describe("Caroucel", () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallowMount(Waveform, {
+    wrapper = shallowMount(Caroucel, {
+      propsData: {
+        items: [{ id: 1 }, { id: 2 }]
+      },
+      slot: {
+        default: `<div class="card">Card</div>`
+      },
       localVue
     });
   });
