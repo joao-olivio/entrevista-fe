@@ -3,6 +3,8 @@ body {
   min-width: 100vw;
   background-color: $light-grey;
   font-family: $font-regular;
+  font-size: 14px;
+  @include responsive-settings((1024: 16px), font-size, ())
 }
 
 .container {

@@ -64,7 +64,7 @@ export default {
     state: {
       type: String,
       default: "play",
-      validator: value => ["play", "pause"].includes(value)
+      validator: value => ["play", "pause", "stop"].includes(value)
     },
     haveProgress: {
       type: Boolean
@@ -90,42 +90,14 @@ export default {
             "M 21.921141,29.007145 28,29 V 10.996094 l -6.092003,-0.02029 z",
           left: "m 11.625,11 v 18 l 6,0.0078 V 10.992194 Z"
         };
+      } else if (this.state === "stop") {
+        return {
+          right:
+            "m 21.921141,26.856511 4.841422,0.0029 0,-13.70854 -4.854566,-0.0084 z",
+          left: "M 12.399049,13.144607 V 26.855393 H 22 V 13.144607 Z"
+        };
       }
     }
   }
 };
 </script>
-
-<style lang="scss">
-svg.play-btn {
-  cursor: pointer;
-  .b {
-    clip-path: url(#a);
-  }
-  .inner-icon {
-    path.left,
-    path.right {
-      transition: 0.2s !important;
-    }
-  }
-  .progress {
-    path {
-      fill: none;
-      stroke-width: 3;
-      stroke-miterlimit: 4;
-      stroke-opacity: 1;
-    }
-  }
-  .progress-background {
-    stroke: #818080;
-    stroke-dasharray: none;
-    stroke-opacity: 0.50200802;
-  }
-  .progress-fill {
-    stroke-linecap: round;
-    stroke-dasharray: 115;
-    transform-origin: 50% 50%;
-    transform: rotateZ(180deg);
-  }
-}
-</style>

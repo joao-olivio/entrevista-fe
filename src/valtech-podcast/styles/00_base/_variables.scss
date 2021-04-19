@@ -14,3 +14,11 @@ $primary: #5CD0FE;
 $alert-red: #d80c0c;
 $success-green: #9eb356;
 $info-orange: #e66c10;
+
+$font-weights: (
+  'light': 300,
+  'regular': 400,
+  'semiBold': 600,
+  'bold': 700,
+  'extraBold': 800
+) !default;

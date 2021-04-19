@@ -1,0 +1,31 @@
+svg.play-btn {
+  cursor: pointer;
+  .b {
+    clip-path: url(#a);
+  }
+  .inner-icon {
+    path.left,
+    path.right {
+      transition: 0.2s !important;
+    }
+  }
+  .progress {
+    path {
+      fill: none;
+      stroke-width: 3;
+      stroke-miterlimit: 4;
+      stroke-opacity: 1;
+    }
+  }
+  .progress-background {
+    stroke: #818080;
+    stroke-dasharray: none;
+    stroke-opacity: 0.50200802;
+  }
+  .progress-fill {
+    stroke-linecap: round;
+    stroke-dasharray: 115;
+    transform-origin: 50% 50%;
+    transform: rotateZ(180deg);
+  }
+}

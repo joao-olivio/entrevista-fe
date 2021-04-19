@@ -1,0 +1,54 @@
+.block {
+  background-color: white;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 40px;
+  color: $dark-grey;
+  letter-spacing: -1.5px;
+  font-weight: map-get($font-weights, 'extraBold');
+  @include responsive-settings((1024: 80px), font-size, ());
+  &.shadow {
+    font-size: 74px;
+    letter-spacing: -1.5px;
+    color: $shadow-color;
+    @include responsive-settings((1024: 200px), font-size, ());
+    @include responsive-settings((1024: -10px), letter-spacing, ());
+  }
+}
+
+.tab-item {
+  font-size: 15px;
+  letter-spacing: 2.31px;
+  text-transform: uppercase;
+  font-weight: map-get($font-weights, 'bold');
+  text-decoration: none;
+}
+
+.card-title {
+  font-size: 28px;
+  color: $black;
+  text-transform: uppercase;
+  font-weight: map-get($font-weights, 'light');
+  margin-bottom: 8px;
+}
+
+.creator-name {
+  font-size: 16px;
+  color: $black;
+  font-weight: map-get($font-weights, 'semiBold');
+  margin-bottom: 4px;
+}
+
+.creator-title {
+  font-size: 13px;
+  color: $medium-grey;
+  font-weight: map-get($font-weights, 'regular');
+}
+
+.podcast-duration {
+  font-size: 12px;
+  color: $dark-grey;
+  font-weight: map-get($font-weights, 'regular');
+}

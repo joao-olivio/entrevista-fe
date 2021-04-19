@@ -3,6 +3,7 @@ module.exports = {
   status: 'ready',
   context: {
     size: 60,
-    progress: 45
+    progress: 45,
+    state: 'stop'
   }
 }
