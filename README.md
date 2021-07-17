@@ -1,3 +1,10 @@
+# Observações
+
+Não utilizei o Fractal de forma completa pois estavam acontecendo alguns bugs, por exemplo, os templates/organisms não apareciam na listagem da documentação, impossibilitando de serem vistos, portanto decidi criar 
+apenas a page, e estruturar os componentes usando apenas o Vue.
+
+Tentei também utilizar a metodologia Atomic (primeira vez), não está perfeito, mas creio que também não esteja ruim.
+
 # Repositório base para FE
 
 

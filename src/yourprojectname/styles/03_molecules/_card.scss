@@ -1,0 +1,105 @@
+div.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-width: 240px;
+  max-width: 240px;
+  height: 282px;
+
+  padding: 32px;
+  border-radius: 4px;
+  background: $white;
+  box-shadow: 0px 0px 20px #0000001a;
+
+  transition: box-shadow 0.2s ease;
+
+  -webkit-animation: fadein 1s;
+  -moz-animation: fadein 1s;
+   -ms-animation: fadein 1s;
+    -o-animation: fadein 1s;
+       animation: fadein 1s;
+
+  &:hover {
+    box-shadow: 0px 0px 20px #00000040;
+  }
+
+  @media all and (min-width: $lg) {
+    height: 342px;
+    min-width: 262px;
+    max-width: 262px;
+  }
+
+  div.card-header {
+    display: flex;
+    flex-direction: column;
+
+    h2.card-title {
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 32px;
+
+      text-transform: uppercase;
+      color: $black;
+
+      margin-bottom: 8px;
+    }
+
+    span.card-name {
+      font-size: 16px;
+      font-weight: 600;
+
+      margin-bottom: 4px;
+    }
+
+    span.card-job {
+      font-size: 13px;
+      color: #777;
+    }
+  }
+
+  div.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div.duration {
+      span.value {
+        font-size: 12px;
+        color: #111;
+      }
+    }
+  }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+div.episode-duration {
+  display: flex;
+  align-items: center;
+
+  font-size: 12px;
+
+  i {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+}

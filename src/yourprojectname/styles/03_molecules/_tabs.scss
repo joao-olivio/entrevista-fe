@@ -1,0 +1,13 @@
+ul.tabs {
+  margin: 16px auto;
+
+  li.tab + li.tab {
+    margin-left: 30px;
+  }
+
+  display: none;
+
+  @media all and (min-width: $lg) {
+    display: flex;
+  }
+}

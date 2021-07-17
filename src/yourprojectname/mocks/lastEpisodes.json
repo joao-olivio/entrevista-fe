@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "title": "Data Structures",
+      "name": "Jacqueline Cardozo",
+      "job": "Front-end Dev Leader",
+      "duration": "45 min",
+      "category": "Development",
+      "new": true
+    },
+    {
+      "title": "Tech To Watch In 2020",
+      "name": "João Olivio",
+      "job": "Front-end Dev Leader",
+      "category": "Development",
+      "duration": "45 min",
+      "new": false
+    },
+    {
+      "title": "How To Keep Your Design Consistent",
+      "name": "Thomas Cardoso",
+      "job": "Design",
+      "category": "Design",
+      "duration": "1h 45 min",
+      "new": true
+    },
+    {
+      "title": "How To Get Better At Problem Solving",
+      "name": "Derrick Pierce",
+      "job": "Front-end Dev Leader",
+      "category": "Development",
+      "duration": "60 min",
+      "new": true
+    },
+    {
+      "title": "How To Keep The Team Cohesive",
+      "name": "Derrick Pierce",
+      "job": "Front-end Dev Leader",
+      "category": "Project Management",
+      "duration": "1h 45 min",
+      "new": true
+    },
+    {
+      "title": "How To Get Better At Problem Solving",
+      "name": "Derrick Pierce",
+      "job": "Front-end Dev Leader",
+      "category": "Project Management",
+      "duration": "60 min",
+      "new": false
+    }
+  ]
+}

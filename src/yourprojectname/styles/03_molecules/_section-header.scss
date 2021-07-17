@@ -1,0 +1,24 @@
+div.section-header {
+  position: relative;
+  padding: 20px;
+}
+
+div.blob {
+  display: none;
+  width: 522px;
+  height: 522px;
+
+  position: absolute;
+  top: -50px;
+  left: -10px;
+
+  border-radius: 50%;
+
+  background-color: #5dd1ff;
+
+  z-index: -1;
+
+  @media all and (min-width: $lg) {
+    display: block;
+  }
+}

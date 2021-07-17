@@ -1,0 +1,51 @@
+$transition-len: 0.8s;
+
+li.tab {
+  position: relative;
+
+  padding: 13px 2px;
+
+  color: #111;
+  font-weight: 700;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+li.tab:after {
+  content: "";
+  display: block;
+  
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+
+  bottom: 0;
+
+  transform: scaleX(0);
+
+  border-bottom: 2px solid transparent;
+}
+
+li.tab:not(.active):hover:after {
+  border-bottom: 2px solid #c2c2c2;
+  transform: scaleY(1);
+
+  transition: transform $transition-len ease;
+}
+
+li.tab.active:after {
+  border-bottom: 2px solid #111;
+  transform: scaleY(1);
+
+  transition: transform $transition-len ease;
+}
+
+li.tab.inactive:after {
+  border-bottom: 2px solid #111;
+  transform: scaleX(0);
+  transition: transform $transition-len ease;
+  transition-delay: 0.2s;
+}

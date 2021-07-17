@@ -1,0 +1,36 @@
+// Essa classe serve apenas para melhorar a visualização do preview da página
+div.last-episodes {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-height: 100vh;
+}
+
+div.last-episodes-list {
+  display: flex;
+  width: 100%;
+
+  position: relative;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 20px;
+
+  padding-right: 40px;
+
+  div.card + div.card {
+    margin-left: 32px;
+  }
+
+  @media all and (min-width: $lg) {
+    justify-content: center;
+  }
+}
+
+div.cta-container {
+  text-align: center;
+  margin-top: 10px;
+}

@@ -1,0 +1,44 @@
+h1.section-title {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 36px;
+  color: #111;
+
+  text-transform: capitalize;
+
+  padding-bottom: 16px;
+
+  border-bottom: 2px solid $light-blue;
+  width: fit-content;
+
+  text-align: center;
+
+  @media all and (min-width: $lg) {
+    font-size: 80px;
+    line-height: 100px;
+    margin: auto;
+
+    border-width: 4px;
+  }
+}
+
+h1.section-title-shadow {
+  position: absolute;
+  left: 0;
+  top: -30px;
+
+  font-size: 74px;
+  font-weight: 800;
+  color: $text-shadow;
+
+  margin: 0;
+
+  z-index: -2;
+
+  @media all and (min-width: $lg) {
+    font-size: 200px;
+    left: 32%;
+    top: -65%;
+    // transform: translateX(50%);
+  }
+}
