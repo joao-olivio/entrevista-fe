@@ -1,4 +1,4 @@
-# :woman_technologist: Interview Fron End - Thami A. Vicente
+# :woman_technologist: Interview Front End - Thami A. Vicente
    
 <p><img src= "https://img.shields.io/static/v1?label=Language&message=JavaScript&color=yellow&style=flat&"> 
  <img src= "https://img.shields.io/static/v1?label=Framework&message=Vuejs&color=olive&style=flat"></p>
