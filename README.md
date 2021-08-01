@@ -51,7 +51,8 @@ npm install
 npm run serve
 ```
 
-<p>4. Access the project's localhost. The default port is [http://localhost:8080](http://localhost:8080)</p>
+<p>4. Access the project's localhost. The default port is <a href="http://localhost:8080">http://localhost:8080</a></p>
+
 
 ## :interrobang: Problems solution
 To see the problems that arose during development and the solutions that we found, visit the [issues](https://github.com/thamiavicente/entrevista-fe-thami/issues)
