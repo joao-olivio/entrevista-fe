@@ -3,15 +3,6 @@
     <h2 class="title-section">Last<br class="break"> Episodes</h2>
     <span class="title-section--before"></span>
     <div class="blue-circle"></div>
-
-    <div class="menu">
-        <ul class="menu--ul">
-            <li>All</li>
-            <li>Development</li>
-            <li>Design</li>
-            <li>Project Management</li>
-        </ul>
-    </div>
   </section>
 </template>
 
@@ -45,7 +36,7 @@ export default {
         z-index: -999;
     }
 
-    .menu, .blue-circle {
+    .blue-circle {
         display: none;
     }
 
@@ -91,32 +82,6 @@ export default {
             z-index: -999;
             left: 6px;
             top: 0px;
-        }
-
-        .menu {
-            display: flex;
-            margin-bottom: 20px;
-        }
-
-        .menu--ul {
-            display: flex;
-            list-style: none;
-        }
-
-        .menu--ul li {
-            margin: 0px 10px;
-            text-transform: uppercase;
-            font-size: 15px;
-            line-height: 20px;
-            letter-spacing: 2.31px;
-            font-weight: 700;
-            border-bottom: 3px solid transparent;
-            padding-bottom: 10px;
-        }
-
-        .menu--ul li:active {
-            border-bottom: 3px solid #000000;
-            padding-bottom: 10px;
         }
     }
 </style>

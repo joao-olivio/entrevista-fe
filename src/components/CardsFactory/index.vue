@@ -1,9 +1,9 @@
 <template>
   <div class="card-content">
     <div>
-      <h2 class="title-card">Data Structures</h2>
-      <p class="author-card">Jacqueline Cardoso</p>
-      <p class="carrer-card">Front-end Dev Leader</p>
+      <h2 class="title-card">{{ data.title }}</h2>
+      <p class="author-card">{{ data.author }}</p>
+      <p class="carrer-card">{{ data.carrer }}</p>
     </div>
 
     <div class="card-content--play-time">
@@ -12,7 +12,7 @@
       <div class="card-content--time">
         <i class="clock-card far fa-clock"></i>
         <p class="time-card">28min</p>
-        <img class="img-author-card" src="../../assets/img/img-jaccardoso.png" />
+        <img class="img-author-card" :src="require(`@/assets/img/${data.pic}`)" /> 
       </div>
     </div>
   </div>
@@ -21,7 +21,10 @@
 <script>
 
 export default {
-
+  name: 'CardsFactory',
+  props: {
+    data: Object
+  }
 }
 </script>
 
@@ -37,6 +40,12 @@ export default {
     padding: 32px;
     margin: 20px 8px;
     background-color: #ffffff;
+    cursor: pointer;
+    animation: transition 0.5s;
+  }
+
+  .card-content:hover, .card-content:focus {
+    box-shadow: 0px 0px 20px #0000004f;
   }
 
   .title-card {

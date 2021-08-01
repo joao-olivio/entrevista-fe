@@ -1,5 +1,5 @@
 <template>
-  <button class="btn-view-more">View more</button>
+  <button href="https://google.com" _target="blank" class="btn-view-more">View more</button>
 </template>
 
 <script>
@@ -21,6 +21,7 @@ export default {
         margin-top: 32px;
         text-transform: uppercase;
         box-shadow: 0px 1px 30px #00000000;
+        cursor: pointer;
     }
 
     @media (min-width: 480px) {
@@ -28,6 +29,13 @@ export default {
             background-color: #ffffff;
             border: 2px solid #000000;
             width: 146px;
+            transition: all 0.2s;
         }
+
+        .btn-view-more:hover {
+            background-color: #00D3FF;
+            border: 2px solid #00D3FF;
+        }
+
     }
 </style>

@@ -50,15 +50,22 @@ export default {
     overflow-x: scroll;
   }
 
-    @media (min-width: 480px) {
-        .container-cards {
-            position: static;
-        }
+  @media (min-width: 768px) {
+    .wrapper-cards {
+    width: 100vh;
+    overflow-x: scroll;
+  }
+  }
 
-        .wrapper-cards {
-            width: 100%;
-            overflow-x: auto;
-        }
-    }
+  @media (min-width: 1024px) {
+      .container-cards {
+          position: static;
+      }
+
+      .wrapper-cards {
+          width: 100%;
+          overflow-x: auto;
+      }
+  }
 
 </style>
