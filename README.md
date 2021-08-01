@@ -1,29 +1,24 @@
-# Repositório base para FE
+# entrevista-fe-thami
 
-
-Olá este é o repositório base para o teste de front end da Valtech Brasil.
-Caso tenha alguma dúvida, entre em contato com [@joao-olivio](https://github.com/joao-olivio) ou [@jackiecard](https://github.com/jackiecard).
-
-# Pré requisitos
-  - Node v10.18.6 (preferencialmente)
-
-### Installation
-
-```sh
-$ cd <entrevista-fe>
-$ npm install 
-$ npm run develop
+## Project setup
+```
+npm install
 ```
 
-### Development
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-Com os passo acima, ao entrar no endereço http://localhost:3000 o fractal deve estar sendo executado.
+### Compiles and minifies for production
+```
+npm run build
+```
 
-# Referencias
-  - [Vue](https://vuejs.org/)
-  - [Vue Utils](https://vue-test-utils.vuejs.org/)
-  - [Jest](https://jestjs.io/)
-  - [Fractal](http://fractal.build/)
-  - [Handlebars](https://handlebarsjs.com/)
-  - [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
-  - [Acessibilidade](https://www.w3.org/TR/WCAG20/)
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
