@@ -12,6 +12,7 @@
 * [Functionalities](#ballot_box_with_check-functionalities)
 * [Prerequisites](#warning-prerequisites)
 * [Frameworks and libs](#books-frameworks-and-libs)
+* [Reference design](#art-reference-design)
 * [How to run](#arrow_forward-how-to-run)
 * [Problems solution](#interrobang-problems-solution)
 * [License](#lock-license)
@@ -28,6 +29,9 @@
 
 ## :books: Frameworks and libs
 - [Vuejs](https://v3.vuejs.org/)
+
+## :art: Reference design
+- [Adobe XD](https://xd.adobe.com/view/c1b55aa7-4fec-4b40-8cfa-6e83a6ea287e-94e6/grid/)
 
 ## :arrow_forward: How to run
 <p>1. Clone the projet and open it</p>
@@ -46,6 +50,7 @@ npm install
 ```
 npm run serve
 ```
+
 <p>4. Access the project's localhost. The default port is [http://localhost:8080](http://localhost:8080)</p>
 
 ## :interrobang: Problems solution
