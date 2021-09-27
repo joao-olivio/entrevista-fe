@@ -66,7 +66,6 @@ export default {
     },
 
     goToSection() {
-      console.log('vai')
       document.querySelector('#about').scrollIntoView({ behavior: 'smooth' })
     },
   },
