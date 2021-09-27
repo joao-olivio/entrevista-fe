@@ -1,0 +1,41 @@
+.v {
+  &-enter {
+    opacity: 0;
+
+    &-active {
+      transition: $global-transition;
+    }
+  }
+
+  &-leave {
+    &-active {
+      transition: $global-transition;
+    }
+
+    &-to {
+      opacity: 0;
+    }
+  }
+}
+
+.slide-from-left {
+  &-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+
+    &-active {
+      transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+  }
+
+  &-leave {
+    &-active {
+      transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &-to {
+      opacity: 0;
+      transform: translateX(0);
+    }
+  }
+}

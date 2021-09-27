@@ -1,0 +1,50 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+$global-radius: 0 !default;
+$global-transition: all 0.5s ease-in-out !default;
+$global-shadow: 0 4px 8px rgba(30, 60, 90, 0.1);
+$global-shadow-hover: 0 6px 12px rgba(30, 60, 90, 0.2);
+
+/* Fonts
+   ========================================================================== */
+
+$font: -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif !default;
+
+/* Colors
+   ========================================================================== */
+
+$blue-400: #5cd0fe;
+$blue-500: #00d3ff;
+
+$gray-100: #f9f9f9;
+$gray-200: #f0f0f0;
+$gray-300: #eee;
+$gray-400: #CCC;
+$gray-500: #999;
+$gray-600: #777;
+$gray-700: #333;
+$gray-800: #232323;
+$gray-900: #111;
+
+$white: #fff;
+$black: #000;
+
+$primary-color: $blue-500 !default;
+$secondary-color: $black;
+
+$zIndexHeader: 20;
+
+/* Gradients
+   ========================================================================== */
+
+$gradient-blue: linear-gradient(180deg, #005BEA 0%, #00C6FB 100%);
+$gradient-red: linear-gradient(180deg, #ED1D24 0%, #ED1F69 100%);
+$gradient-purple: linear-gradient(180deg, #B224EF 0%, #7579FF 100%);
+$gradient-green: linear-gradient(180deg, #0BA360 0%, #3CBA92 100%);
+$gradient-pink: linear-gradient(180deg, #FF7EB3 0%, #FF758C 100%);
+$gradient-black: linear-gradient(top, 30% #00000000, 75% #000);
+$gradient-dark: linear-gradient(top, 40% #00000000, #000);

@@ -1,0 +1,121 @@
+.c-hero {
+  padding: 12rem 1.25rem 7.5rem;
+
+  @media (min-width: 1024px) {
+    background: url("/images/hero-bg.png") 0% 100%/cover no-repeat;
+    @include flex(center, center);
+    padding: 7rem 0 7rem;
+    height: 100vh;
+  }
+
+  @media (min-width: 3840px) {
+    background: url("/images/hero-bg@2x.png") 0% 100%/cover no-repeat;    
+  }
+
+  &::before {
+    content: "";
+    background: url("/images/oval.svg") 340%/contain no-repeat;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 180px;
+    bottom: -10%;
+    right: 0;
+    opacity: 0.8;
+  }
+
+  &__container {
+    @include flex(false, center, column);    
+    text-align: center;
+    position: relative;
+
+    &::before {
+      content: 'Podcast';
+      position: absolute;
+      top: -1rem;
+      color: $gray-300;
+      display: block;
+      font-size: 5rem;
+      font-weight: 900;
+      text-align: center;
+      letter-spacing: -4px;
+      line-height: 1;
+      z-index: 0;
+
+      @media (min-width: 1024px) {
+        font-size: 12.5rem;
+        top: -2rem;
+      }
+    }
+  }
+
+  &__logo {
+    max-width: 176px;
+    margin-bottom: 0.75rem;
+    padding-bottom: 18px;
+    position: relative;
+
+    @media (min-width: 1024px) {
+      max-width: 362px;
+      padding-bottom: 20px;
+    }
+
+    &::before {
+      background-color: $blue-400;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      height: 2px;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 242px;
+
+      @media (min-width: 1024px) {
+        height: 4px;
+      }
+    }
+  }
+
+  &__title {
+    color: $gray-900;
+    font-size: 1.75rem;
+    font-weight: 300;
+    letter-spacing: 1.4px;
+    margin-bottom: 1.25rem;
+    position: relative;
+
+    @media (min-width: 1024px) {
+      font-size: 3.75rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+
+    @media (min-width: 1024px) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__go-down {
+    background: none;
+    border: none;
+    display: none;
+    gap: 12px;
+    position: absolute;
+    bottom: 0.5rem;
+    transition: $global-transition;
+
+    &:hover {
+      cursor: pointer;
+      fill: $primary-color;
+    }
+
+    @media (min-width: 1024px) {
+      @include flex(center, center, column);
+    }
+  }
+}

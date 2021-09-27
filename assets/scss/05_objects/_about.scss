@@ -1,0 +1,106 @@
+.o-about {
+  background-color: $gray-900;
+  padding: 4rem 0 6rem;
+  position: relative;
+
+  &__title {
+    color: $white;
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: 1024px) {
+      font-size: 5rem;
+    }
+
+    &::before {
+      content: 'About the show';
+      position: absolute;
+      top: -2rem;
+      left: -1.25rem;
+      color: $gray-800;
+      display: block;
+      font-size: 6.25rem;
+      font-weight: 900;
+      text-align: left;
+      letter-spacing: -4px;
+      line-height: 0.8;
+      z-index: -1;
+      word-break: break-all;
+
+      @media (min-width: 1024px) {
+        font-size: 8.5rem;
+        top: -2rem;
+        left: 0;
+      }
+
+      @media (min-width: 1280px) {
+        font-size: 12.5rem;
+        top: -5rem;
+        left: -2rem;
+      }
+    }
+
+    &::after {
+      background-color: $primary-color;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+
+      @media (min-width: 1024px) {
+        width: 242px;
+      }
+    }
+  }
+
+  &__description {
+    color: $gray-500;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+
+    &:last-of-type {
+      margin-bottom: 1.25rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 18px;
+    }
+  }
+
+  &__img {
+    display: block;
+    margin: auto;
+  }
+
+  &__column {
+    position: relative;
+
+    @media (min-width: 1024px) {
+      flex: 1 0 50%;
+    }
+  }
+
+  .o-container {
+    @media (min-width: 1024px) {
+      @include grid(1.25fr 1fr);
+      align-items: center;
+      gap: 4rem;
+    }
+
+    @media (min-width: 1280px) {
+      gap: 6.25rem;
+    }
+  }
+}

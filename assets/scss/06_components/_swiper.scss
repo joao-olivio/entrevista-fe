@@ -1,0 +1,22 @@
+@import 'swiper/css/swiper.css';
+
+.swiper-container {
+  padding: 2rem 2.5rem;
+}
+
+.swiper-container-horizontal > .swiper-scrollbar {
+  height: 4px;
+  bottom: 18px;
+}
+
+.swiper-scrollbar {
+  background: none;
+}
+
+.swiper-scrollbar-drag {
+  background: $gray-500;
+}
+
+.swiper-slide {
+  width: 100%;
+}

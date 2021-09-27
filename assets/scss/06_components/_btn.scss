@@ -1,0 +1,111 @@
+/* ==========================================================================
+  #BUTTONS
+========================================================================== */
+
+/**
+ * This is an example component. Extend inuitcss by building your own components
+ * that make up your UI. Component classes are prefixed with a `c-`.
+ */
+
+.c-btn {
+  border: none;
+  border-radius: $global-radius;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  padding: 1rem 2rem;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  transition: $global-transition;
+  z-index: 0;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: $global-radius;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: $global-transition;
+  }
+
+  // Variants
+
+  &--primary {
+    background-color: $primary-color;
+    color: $gray-900;
+
+    &::after {
+      background-color: $primary-color;
+    }
+
+    &:hover {
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+  }
+
+  &--secondary {
+    background-color: $secondary-color;
+    color: $white;
+
+    &::after {
+      background-color: $secondary-color;
+    }
+
+    &:hover {
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+  }
+
+  &--outline {
+    background: none;
+    color: $secondary-color;
+
+    &::after {
+      background: none;
+      border: 2px solid $secondary-color;
+    }
+
+    &:hover {
+      background-color: $secondary-color;
+      color: $white;
+
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+  }
+
+  // Sizes
+
+  &--small {
+    font-size: 0.75rem;
+  }
+
+  &--medium {
+    font-size: 0.875rem;
+  }
+
+  &--big {
+    font-size: 1rem;
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+}

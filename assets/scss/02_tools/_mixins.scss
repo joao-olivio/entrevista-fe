@@ -1,0 +1,40 @@
+@mixin flex(
+  $justifyContent: false,
+  $alignItems: false,
+  $direction: false,
+  $wrap: false
+) {
+  display: flex;
+
+  @if ($justifyContent) {
+    justify-content: $justifyContent;
+  }
+
+  @if ($alignItems) {
+    align-items: $alignItems;
+  }
+
+  @if ($direction) {
+    flex-direction: $direction;
+  }
+
+  @if ($wrap) {
+    wrap: $wrap;
+  }
+}
+
+@mixin grid($templateColumns: false, $gridGap: false) {
+  display: grid;
+
+  @if ($templateColumns) {
+    grid-template-columns: $templateColumns;
+  }
+
+  @if ($gridGap) {
+    grid-gap: $gridGap;
+  }
+}
+
+@mixin cardBoxShadow($color: false) {
+  box-shadow: 0px 20px 20px rgba($color, 0.12);
+}

@@ -1,0 +1,60 @@
+.c-hamburger-icon {
+  background: $gray-100;
+  border: none;
+  border-radius: 50%;
+  @include flex(center, center, column);
+  gap: 4px;
+  padding: 8px;
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: $global-transition;
+  z-index: $zIndexHeader + 5;
+
+  $c-hamburger-icon: &;
+
+  @media (min-width: 1920px) {
+    background: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--opened {
+    background-color: transparent;
+
+    #{$c-hamburger-icon}__line {
+      background-color: $white;
+
+      &:nth-child(1) {
+        transform-origin: bottom;
+        transform: rotateZ(45deg) translate(-1px, 4px);
+        width: 50%;
+      }
+
+      &:nth-child(2) {
+        transform-origin: top;
+        transform: rotateZ(-45deg) translate(0px, 0px);
+      }
+
+      &:nth-child(3) {
+        transform-origin: bottom;
+        transform: translate(5px, -4px) rotateZ(45deg);
+        width: 50%;
+      }
+    }
+  }
+
+  &__line {
+    background-color: $black;
+    border-radius: 2px;
+    height: 3px;
+    transition: all 0.5s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    width: 100%;
+
+    @media (min-width: 1920px) {
+      background-color: $white;
+    }
+  }
+}

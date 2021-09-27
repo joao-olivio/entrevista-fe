@@ -1,29 +1,20 @@
-# Repositório base para FE
+# marvel-heroes-app
 
+## Build Setup
 
-Olá este é o repositório base para o teste de front end da Valtech Brasil.
-Caso tenha alguma dúvida, entre em contato com [@joao-olivio](https://github.com/joao-olivio) ou [@jackiecard](https://github.com/jackiecard).
+```bash
+# install dependencies
+$ yarn install
 
-# Pré requisitos
-  - Node v10.18.6 (preferencialmente)
+# serve with hot reload at localhost:3000
+$ yarn dev
 
-### Installation
+# build for production and launch server
+$ yarn build
+$ yarn start
 
-```sh
-$ cd <entrevista-fe>
-$ npm install 
-$ npm run develop
+# generate static project
+$ yarn generate
 ```
 
-### Development
-
-Com os passo acima, ao entrar no endereço http://localhost:3000 o fractal deve estar sendo executado.
-
-# Referencias
-  - [Vue](https://vuejs.org/)
-  - [Vue Utils](https://vue-test-utils.vuejs.org/)
-  - [Jest](https://jestjs.io/)
-  - [Fractal](http://fractal.build/)
-  - [Handlebars](https://handlebarsjs.com/)
-  - [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
-  - [Acessibilidade](https://www.w3.org/TR/WCAG20/)
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

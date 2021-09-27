@@ -1,0 +1,14 @@
+.o-divider {
+  border: none;
+  border-top: 1px solid $gray-800;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 750px;
+  }
+}

@@ -1,0 +1,86 @@
+.c-card {
+  background-color: $white;
+  border-radius: 4px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  @include flex(space-between, center, column);
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  transition: $global-transition;
+  transform-origin: bottom;
+
+  &:hover {
+    box-shadow: 0px 12px 32px -8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+  }
+
+  &__body {
+    position: relative;
+    @include flex(false, false, column);
+    padding: 2rem 2rem 0;
+    min-height: 220px;
+    margin-bottom: 4rem;
+
+    @media (min-width: 1024px) {
+      margin-bottom: 2.25rem;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  &__name {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 0.25rem;
+  }
+
+  &__job-title {
+    font-size: 0.875rem;
+    color: $gray-600;
+  }
+
+  &__footer {
+    @include flex(space-between, center);
+    padding: 0 2rem 2rem;
+    width: 100%;
+  }
+
+  &__play {
+    background: none;
+    border: none;
+    @include flex();
+    margin: 0;
+    padding: 0;
+    transition: $global-transition;
+
+    &:hover {
+      cursor: pointer;
+      fill: $primary-color;
+    }
+
+    &:focus {
+      fill: $primary-color;
+    }
+  }
+
+  &__time {
+    @include flex(false, center);
+    gap: 0.5rem;
+  }
+
+  &__time-icon {
+    max-width: 20px;
+  }
+
+  &__duration {
+    color: $gray-900;
+    font-size: 0.75rem;
+  }
+}

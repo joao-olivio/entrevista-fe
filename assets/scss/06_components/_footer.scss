@@ -1,0 +1,88 @@
+.c-footer {
+  background-color: $gray-900;
+  padding: 4rem 0;
+  position: relative;
+  text-align: center;
+
+  @media (min-width: 1024px) {
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 6rem 0;
+  }
+
+  &__logo {
+    width: 116px;
+    margin-bottom: 1rem;
+    position: relative;
+
+    @media (min-width: 1024px) {
+      width: 190px;
+    }
+  }
+
+  &__items {
+    @include flex(false, false, column);    
+    gap: 2rem;
+    padding-top: 4rem;
+    margin-bottom: 4.5rem;
+    position: relative;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      gap: 4.25rem;
+      justify-content: center;
+      margin-bottom: 6rem;
+      padding-top: 2.5rem;
+    }
+
+    &::before {
+      background-color: $blue-400;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 2px;
+      transition: $global-transition;
+      transform: translateX(-50%);
+      max-width: 120px;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    color: $white;
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    position: relative;
+    text-transform: uppercase;
+
+    &::after {
+      background-color: $blue-400;
+      content: "";
+      position: absolute;
+      bottom: -14px;
+      left: 50%;
+      height: 2px;
+      transform: translateX(-50%) scale(0);
+      transition: $global-transition;
+      width: 102%;
+    }
+
+    &:hover {
+      &::after {
+        transform: translateX(-50%) scale(1);
+      }
+    }
+  }
+
+  &__copyright {
+    color: $gray-400;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}

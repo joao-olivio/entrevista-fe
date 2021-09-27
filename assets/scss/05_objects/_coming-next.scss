@@ -1,0 +1,257 @@
+.o-coming-next {
+  padding: 2rem 0 4rem;
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: 1024px) {
+    padding: 10.25rem 0;
+  }
+
+  &::after {
+    content: url("/images/blue-pattern.svg");
+    display: block;
+    position: absolute;
+    top: 1.25rem;
+    left: -5.5rem;
+    width: 100%;
+    height: 104px;
+    z-index: -1;
+
+    @media (min-width: 1024px) {
+      top: 3.5rem;
+      left: -5.5rem;
+      width: 100%;
+      height: 104px;
+    }
+  }
+
+  &__blue-smudge {
+    background: url("/images/blue-smudge.svg") 40% 100%/180% no-repeat;
+    width: 100vw;
+    height: 115vw;
+    position: absolute;
+    top: 0;
+    left: -2.5rem;
+    margin-top: -30%;
+    z-index: -2;
+
+    @media (min-width: 1024px) {
+      background: url("/images/blue-smudge-desktop.svg") 100% 0%/contain no-repeat;
+      top: -15%;
+      left: auto;
+      right: -5%;      
+      width: 170%;
+      height: 200%;
+    }
+
+    @media (min-width: 1280px) {
+      right: -15%;
+      width: 150%;
+    }
+  }
+
+  &__title {
+    color: $gray-900;
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: -1.5px;
+    line-height: 0.9;
+    margin-bottom: 1rem;
+    position: relative;
+
+    @media (min-width: 1024px) {
+      font-size: 5rem;
+      line-height: 0.7;
+      margin-bottom: 2rem;
+    }
+
+    &::before {
+      content: 'Next';
+      position: absolute;
+      top: -2rem;
+      left: -0.5rem;
+      color: $white;
+      display: block;
+      font-size: 6.25rem;
+      font-weight: 900;
+      text-align: left;
+      letter-spacing: -4.86px;
+      line-height: 1;
+      opacity: 0.3;
+      padding: 0 0.5rem;
+      z-index: -1;
+
+      @media (min-width: 1024px) {
+        font-size: 8.5rem;
+        line-height: 0.7;
+        padding: 0;
+      }
+
+      @media (min-width: 1280px) {
+        font-size: 12.5rem;
+        letter-spacing: -9.72px;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto 3.5rem;
+  }
+
+  &__white-oval {
+    background: url("/images/white-oval.svg") top center/100% no-repeat;
+    width: 98vw;
+    height: 100vw;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-top: -10vw;
+    transform: translateX(-50%);
+    z-index: -2;
+
+    @media (min-width: 400px) and (max-width: 1023px) {
+      width: 88vw;
+    }
+
+    @media (min-width: 1024px) {
+      width: 100%;
+      height: 200%;
+      top: -10%;
+      left: -10%;
+      margin-top: 0;
+      transform: translateX(0);
+    }
+  }
+
+  &__job-info {
+    margin-top: -5rem;
+    padding: 2rem 0;
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: 1024px) {
+      margin: 0;
+      padding: 2rem 0 2rem 3rem;
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__job-position {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: 1024px) {
+      font-weight: normal;
+      margin-bottom: 0;
+    }
+
+    &::after {
+      background-color: $primary-color;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+
+      @media (min-width: 1024px) {
+        width: 242px;
+      }
+    }
+  }
+
+  &__name {
+    color: $gray-900;
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: -1.5px;
+    line-height: 0.9;
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: 1024px) {
+      font-size: 90px;
+      line-height: 0.8;
+    }
+
+    &::before {
+      content: url("/images/gray-pattern.svg");
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+
+      @media (min-width: 1024px) {
+        content: url("/images/gray-pattern-desktop.svg");
+        top: 12%;
+        right: -5%;
+      }
+    }
+  }
+
+  &__column {
+    position: relative;
+
+    &:nth-child(1) {
+      order: 2;
+
+      @media (min-width: 1024px) {
+        order: 1;
+      }
+    }
+
+    &:nth-child(2) {
+      order: 1;
+
+      @media (min-width: 1024px) {
+        order: 2;
+      }
+    }
+  }
+
+  &__description {
+    display: none;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+
+    &:last-of-type {
+      margin-bottom: 1.25rem;
+    }
+
+    @media (min-width: 1024px) {
+      display: block;
+      font-size: 18px;
+      max-width: 300px;
+    }
+
+    @media (min-width: 1280px) {      
+      max-width: 350px;
+    }
+  }
+
+  .o-container {
+    @include grid(1fr);
+
+    @media (min-width: 1024px) {
+      @include grid(1.25fr 1fr);
+      align-items: center;
+      gap: 6.25rem;
+    }
+  }
+}

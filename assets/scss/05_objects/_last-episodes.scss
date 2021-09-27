@@ -1,0 +1,150 @@
+.o-last-episodes {
+  padding-top: 5rem;
+  margin-bottom: 5rem;
+
+  &::before {
+    content: 'Episodes';
+    position: absolute;
+    top: 5.5rem;
+    left: 0;
+    color: $gray-200;
+    display: block;
+    font-size: 4.5rem;
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: -3.7px;
+    line-height: 1;
+    padding: 0 1.5rem;
+    word-break: break-all;
+    z-index: -1;
+
+    @media (min-width: 1024px) {
+      content: 'Last Episodes';
+      font-size: 12.5rem;
+      letter-spacing: -10px;
+      top: 8%;
+      left: 9%;
+    }
+
+    @media (min-width: 1920px) {
+      left: 25%;
+    }
+  }
+
+  &__blue-circle {
+    @media (min-width: 1024px) {
+      width: 554px;
+      height: 554px;
+      background-color: $blue-400;
+      position: absolute;
+      left: -9.5%;
+      top: -20%;
+      border-radius: 50%;
+    }
+  }
+
+  &__title {
+    color: $gray-900;
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: -1.5px;
+    line-height: 1.3;
+    margin-left: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 10px;
+    position: relative;
+
+    @media (min-width: 1024px) {
+      font-size: 5rem;
+      margin: 0 0 28px;
+      padding-bottom: 12px;
+    }
+
+    &::after {
+      background-color: $blue-400;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+
+      @media (min-width: 1024px) {
+        height: 4px;
+      }
+
+    }
+  }
+
+  &__cards {
+    text-align: center;
+
+    @media (min-width: 1440px) {
+      margin: 0 auto 44px;
+      max-width: 1140px;
+      padding: 0;
+    }
+  }
+
+  &__filters {
+    display: none;
+
+    @media (min-width: 1024px) {
+      @include flex(center, center);
+      gap: 2rem;
+      position: relative;
+    }
+  }
+
+  &__filter {
+    color: $gray-900;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    position: relative;
+    text-transform: uppercase;
+    transition: $global-transition;
+
+    &::after {
+      content: "";
+      background-color: $gray-900;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: scaleX(0);
+      transition: $global-transition;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &--active {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .o-container {
+    @media (min-width: 1024px) {
+      text-align: center;
+    }
+  }
+
+  .c-btn {
+    width: 100%;
+
+    @media (min-width: 1024px) {
+      width: auto;
+    }
+  }
+}

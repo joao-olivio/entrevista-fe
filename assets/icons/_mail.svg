@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16">
+  <defs>
+    <clipPath id="a">
+      <path d="M18 16H2a2 2 0 0 1-2-2L.01 2A2 2 0 0 1 2 0h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2ZM2 2v2l8 5 8-5V2l-8 5Z" class="a"/>
+    </clipPath>
+  </defs>
+  <path d="M18 16H2a2 2 0 0 1-2-2L.01 2A2 2 0 0 1 2 0h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2ZM2 2v2l8 5 8-5V2l-8 5Z" class="a"/>
+</svg>

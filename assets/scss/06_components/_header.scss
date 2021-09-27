@@ -1,0 +1,14 @@
+.c-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1.5rem;
+  transition: $global-transition;
+  z-index: $zIndexHeader;
+
+  @media (min-width: 1920px)  {
+    background: $primary-color;
+    border-radius: 0 0 15rem 0;
+    padding: 4rem 7rem 7rem 4rem;
+  }
+}

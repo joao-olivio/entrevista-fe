@@ -1,0 +1,31 @@
+/* ==========================================================================
+   #ALIGN
+   ========================================================================== */
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-left {
+  text-align: left;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+.u-d-flex {
+  @include flex();
+}
+
+.u-flex-direction {
+  &--column {
+    flex-direction: column;
+  }
+}
+
+.u-flex {
+  &--1 {
+    flex: 1;
+  }
+}

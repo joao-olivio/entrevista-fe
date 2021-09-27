@@ -1,0 +1,143 @@
+.o-subscribe {
+  background-color: $gray-900;
+  padding: 4rem 0 6.25rem;
+  position: relative;
+  z-index: 1;
+  $root: &;
+
+  @media (min-width: 1024px) {
+    padding: 12rem 0 6.25rem;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 17.5rem 0 6.25rem;
+  }
+
+  &::before {
+    content: 'Subscribe';
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    color: $gray-800;
+    display: block;
+    font-size: 3.75rem;
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: -4px;
+    line-height: 0.8;
+    padding: 0 1.25rem;
+    z-index: 0;
+
+    @media (min-width: 1024px) {
+      font-size: 8.5rem;
+      left: 50%;
+      top: 10rem;
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: 1280px) {
+      font-size: 12.5rem;      
+      top: 13rem;
+    }
+  }
+
+  &__title {
+    color: $white;
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    position: relative;
+
+    @media (min-width: 1024px) {
+      font-size: 5rem;
+    }
+
+    &::after {
+      background-color: $primary-color;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+    }
+  }
+
+  &__description {
+    color: $gray-400;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    position: relative;
+
+    &:last-of-type {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &__form {
+    @media (min-width: 1024px) {
+      @include flex(center);
+    }
+  }
+
+  &__input-wrapper {
+    position: relative;
+
+    @media (min-width: 1024px) {
+      @include flex(center);
+    }
+  }
+
+  &__input {
+    border: 1px solid $gray-400;
+    border-radius: $global-radius;
+    font-family: $font;
+    margin-bottom: 1rem;
+    padding: 1rem 1rem 1rem 3.5rem;
+    width: 100%;
+
+    @media (min-width: 1024px) {
+      margin-bottom: 0;
+      width: 256px;
+    }
+
+    &::placeholder {
+      color: $gray-500;
+      font-size: 0.875rem;
+    }
+
+    &:focus {
+      outline-color: $primary-color;
+      outline-offset: -1px;
+
+      + #{$root}__mail-icon {
+        fill: $primary-color;
+      }
+    }
+  }
+
+  &__mail-icon {
+    position: absolute;
+    top: 20px;
+    left: 1rem;
+    transition: $global-transition;
+    width: 1.25rem;
+  }
+
+  .o-container {
+    @media (min-width: 1024px) {
+      text-align: center;
+    }
+  }
+
+  .c-btn {
+    @media (min-width: 1024px) {
+      width: auto;
+    }
+  }
+}
