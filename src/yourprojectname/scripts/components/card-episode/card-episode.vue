@@ -32,12 +32,6 @@ export default {
   name: "card-episode",
   props: {
     episode: { type: Object, required: true }
-  },
-  data() {
-    return {};
-  },
-  computed: {},
-  mounted() {},
-  methods: {}
+  }
 };
 </script>

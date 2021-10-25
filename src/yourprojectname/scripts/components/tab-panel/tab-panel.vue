@@ -102,9 +102,6 @@ export default {
         return this.episodesList.filter(ep => ep.category === category);
       }
     },
-    parseJSON(response) {
-      response.json();
-    },
     isActive(menuItem) {
       return this.activeItem === menuItem;
     },
