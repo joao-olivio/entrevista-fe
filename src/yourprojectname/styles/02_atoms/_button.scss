@@ -12,6 +12,7 @@
   display: inline-block;
   text-align: center;
   overflow: hidden;
+  cursor: pointer;
 
   &::before {
     content: '';
@@ -36,7 +37,7 @@
     font-size: rem(24px);
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
 
     & > *:first-child {
       padding-right: rem(10px);

@@ -3,9 +3,37 @@ body {
   min-width: 100vw;
   background-color: $light-grey;
   font-family: $font-regular;
+  list-style: none;
 }
 
 .container {
   max-width: 90vw;
   margin: auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.my-md{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.as-center {
+  align-self: center;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-between {
+  justify-content: space-between;
+}
+.jc-around {
+  justify-content: space-around;
+}
+
+.fd-column {
+  flex-direction: column;
 }
