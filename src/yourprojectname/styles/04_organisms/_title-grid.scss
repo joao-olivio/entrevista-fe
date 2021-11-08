@@ -36,3 +36,50 @@ section {
     }
   }
 }
+
+@media screen and (max-width: 575px) {
+  section {
+    &.section-title {
+      flex-direction: column;
+      padding: 120px 0 0 0;
+
+      .titles {
+        h2 {
+          font-size: 40px;
+          line-height: 36px;
+          max-width: 207px;
+          margin-left: 40px;
+          text-align: left;
+          &::after {
+            content: "";
+            margin: 16px 0;
+            height: 2px;
+            width: 167px;
+          }
+        }
+        h3 {
+          font-size: 70px;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .titles {
+    h2 {
+      text-align: left;
+      &::after {
+        content: "";
+        margin: 16px 0;
+        height: 2px;
+        width: 167px;
+      }
+    }
+    h3 {
+      font-size: 70px;
+      margin-left: 0;
+    }
+  }
+}

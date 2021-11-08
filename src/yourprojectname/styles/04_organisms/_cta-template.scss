@@ -4,3 +4,16 @@ section {
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 575px) {
+  section {
+    &.section-cta {
+      a {
+        &.link {
+          background-color: #00d3ff;
+          border: none;
+        }
+      }
+    }
+  }
+}

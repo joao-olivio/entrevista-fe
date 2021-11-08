@@ -34,3 +34,21 @@ body {
     z-index: -1;
   }
 }
+
+@media screen and (max-width: 575px) {
+  #main-container {
+    &::before {
+      content: "";
+      background-color: transparent;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #main-container {
+    &::before {
+      content: "";
+      background-color: transparent;
+    }
+  }
+}
