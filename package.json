@@ -33,6 +33,7 @@
     "bootstrap-sass": "^3.3.7",
     "es6-promise": "^4.1.1",
     "include-media": "^1.4.9",
+    "swiper": "^7.2.0",
     "url-search-params-polyfill": "^2.0.1",
     "vue": "^2.6.11",
     "vueify": "^9.4.1",

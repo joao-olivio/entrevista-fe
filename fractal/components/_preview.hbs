@@ -10,6 +10,7 @@
   <meta property="og:description"
     content="Facebook's Open Graph protocol allows for web developers to turn their websites into Facebook "
     graph " objects, allowing a certain level of customization over how information is carried over from a non-Facebook website to Facebook when a page is 'recommended', 'liked', or just generally shared." />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="{{ path '/styles/bundle.css' }}">
   <title>Teste Técnico FE</title>
 </head>
@@ -24,6 +25,29 @@
     {{{ yield }}}
   </div>
   <script src="{{ path '/scripts/bundle.js' }}"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      },
+    });
+  </script>
 </body>
 
 </html>

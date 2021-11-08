@@ -1,5 +1,10 @@
-<div class="cards sm:space-y-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-8 md:gap-10 lg:gap-12">
-  {{#each cards}}
-  {{render '@card'}}
-  {{/each}}
+<div class="cards">
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      {{#each cards}}
+      {{render '@card'}}
+      {{/each}}
+    </div>
+  </div>
 </div>

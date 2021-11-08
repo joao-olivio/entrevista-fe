@@ -37,5 +37,9 @@
       margin-top: rem(108px);
       align-self: flex-end;
     }
+
+    &:hover {
+      box-shadow: 0 0 20px rgba(33, 33, 33, 0.4);
+    }
   }
 }
