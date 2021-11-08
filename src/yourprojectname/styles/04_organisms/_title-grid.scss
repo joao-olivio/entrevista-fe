@@ -1,0 +1,38 @@
+section {
+  &.section-title {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 165px 0 0 0;
+
+    .titles {
+      h2 {
+        color: $black;
+        font-size: 80px;
+        font-weight: 800;
+        line-height: 109px;
+        text-align: center;
+
+        &::after {
+          content: "";
+          background: #5cd0fe;
+          display: block;
+          height: 4px;
+          width: 500px;
+          margin: 8px auto;
+        }
+      }
+      h3 {
+        color: $title-shadow;
+        font-size: 200px;
+        font-weight: 800;
+        line-height: 273px;
+        margin-top: -220px;
+        margin-left: 200px;
+        position: relative;
+        text-align: center;
+        z-index: -1;
+      }
+    }
+  }
+}

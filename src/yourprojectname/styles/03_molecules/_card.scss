@@ -1,0 +1,41 @@
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    background: $white;
+    box-shadow: 0px 0px 20px #0000001a;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: rem(32px);
+    min-height: rem(234px);
+    max-width: rem(198px);
+    margin-right: 32px;
+
+    h3 {
+      color: $black;
+      font-weight: 300;
+      font-size: 28px;
+      line-height: 32px;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 16px;
+      margin-top: rem(8px);
+    }
+    span {
+      color: $dark-gray;
+      font-size: 13px;
+    }
+
+    .card-wrap {
+      display: flex;
+      justify-content: space-between;
+      margin-top: rem(108px);
+      align-self: flex-end;
+    }
+  }
+}
