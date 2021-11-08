@@ -9,11 +9,12 @@ a {
     border: 2px solid $black;
     color: $black;
     text-transform: uppercase;
-    padding: rem(16px 32px);
+    padding: rem(15px 32px);
     min-height: rem(18px);
     min-width: rem(146px);
     display: inline-block;
     text-align: center;
+    text-decoration: none;
     overflow: hidden;
   }
   &:hover {

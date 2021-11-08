@@ -1,8 +1,11 @@
 section {
-  &.section-carrousel {
+  &.section-cta {
     background-color: transparent;
     border: none;
     border-radius: 0;
     padding: 0;
+
+    display: flex;
+    justify-content: center;
   }
 }
