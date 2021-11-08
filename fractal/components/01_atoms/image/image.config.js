@@ -1,6 +1,6 @@
 module.exports = {
-    context: {
-        src: '/images/dicaprio.jpg',
-        alt: 'Leonardo DiCaprio'
-    }
-}
+  context: {
+    src: "/images/foto1.png",
+    alt: "Foto 1"
+  }
+};
