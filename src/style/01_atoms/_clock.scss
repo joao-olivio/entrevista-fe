@@ -1,0 +1,31 @@
+.a-clock{
+  --border-thickness: #{rem(3)};
+  display: inline-grid;
+  height: rem(30);
+  width: rem(30);
+  border-radius: 50%;
+  border: var(--border-thickness) solid var(--darker-primary-color);
+
+  &__minutes-pointer,
+  &__hours-pointer{
+    grid-area: 1 / 1;
+    justify-self: start;
+    align-self: center;
+    height: rem(2);
+    width: 40%;
+    margin: 0 0 0 rem(2);
+    background-color: var(--darker-primary-color);
+    transform-origin: center right;
+    transform: rotateZ(90deg);
+  }
+
+  &__middle-ball{
+    grid-area: 1 / 1;
+    justify-self: center;
+    align-self: center;
+    height: rem(4);
+    width: rem(4);
+    border-radius: 50%;
+    background-color: var(--darker-primary-color);
+  }
+}

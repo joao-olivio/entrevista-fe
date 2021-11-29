@@ -1,0 +1,31 @@
+@use 'sass:map';
+
+:root{
+  --primary-color: #{map.get($theme-colors, 'primary')};
+  --darker-primary-color: #{map.get($theme-colors, 'darker-primary')};
+  --secondary-color: #{map.get($theme-colors, 'secondary')};
+  --caption-color: #{map.get($theme-colors, 'caption')};
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: $base-font;
+  background-color: #f9f9f9;
+}
+
+.container{
+  width: 100%;
+  max-width: rem(1440);
+  margin: 0 auto;
+}
+
+.sr-only{
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}

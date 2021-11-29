@@ -1,0 +1,9 @@
+.o-last-episodes{
+  display: grid;
+  padding: rem(75) 0;
+  overflow: hidden;
+
+  @media(min-width: rem(1024, 'em')){
+    padding: rem(175) 0;
+  }
+}

@@ -1,0 +1,56 @@
+.m-card{
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: rem(40);
+  padding: rem(32);
+  max-width: rem(240);
+  border-radius: rem(4);
+  background: #ffffff;
+  box-shadow: 0 0 rem(20) rgba(0, 0, 0, 0.1);
+  transition: all 1s;
+
+  &:hover{
+    box-shadow: 0 0 rem(40) rgba(0, 0, 0, 0.25);
+  }
+
+  &__title{
+    margin: 0 0 rem(15) 0;
+    font-size: rem(28);
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  &__name{
+    margin: 0 0 rem(10) 0;
+    font-size: rem(16);
+    font-weight: 600;
+  }
+
+  &__caption{
+    font-size: rem(13);
+    color: var(--caption-color);
+  }
+
+  &__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__play-button{
+      position: relative;
+      cursor: pointer;
+
+      &:focus{
+        outline: rem(2) solid var(--secondary-color);
+      }
+    }
+
+    &__time{
+      display: flex;
+      gap: rem(10);
+      align-items: center;
+    }
+  }
+}

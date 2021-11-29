@@ -1,0 +1,22 @@
+.a-button{
+  padding: rem(16) rem(32);
+  font-size: rem(13);
+  font-weight: 700;
+  letter-spacing: rem(1);
+  text-transform: uppercase;
+  background-color: var(--darker-primary-color);
+  color: #ffffff;
+  text-align: center;
+  margin: 0 auto;
+
+  &--secondary{
+    background: transparent;
+    border: rem(2) solid var(--primary-color);
+    color: var(--darker-primary-color);
+  }
+
+  &--featured{
+    background: var(--secondary-color);
+    color: var(--darker-primary-color);
+  }
+}

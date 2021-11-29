@@ -1,0 +1,23 @@
+.a-tab-item{
+  font-size: rem(15);
+  letter-spacing: rem(2.3);
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &::after{
+    content: '';
+    display: block;
+    margin: rem(10) auto 0 auto;
+    height: rem(2);
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: .3s ease-in-out;
+  }
+
+  &--selected{
+    &::after{
+      width: 100%;
+    }
+  }
+}

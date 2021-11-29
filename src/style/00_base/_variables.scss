@@ -1,0 +1,10 @@
+@use 'sass:map';
+
+$base-font: 'Open Sans', sans-serif;
+
+$theme-colors: (
+    'primary': #111111,
+    'darker-primary': #000000,
+    'secondary': #5cd0fe,
+    'caption': #777777
+);

@@ -1,0 +1,17 @@
+.m-tab-container{
+  display: none;
+  grid-area: 2 / 1;
+  align-self: start;
+  align-items: flex-start;
+  margin: rem(50) auto 0 auto;
+  gap: rem(32);
+
+  @media (min-width: rem(1024, 'em')){
+    display: flex;
+  }
+
+  @media (min-width: rem(1440, 'em')){
+    grid-area: 1 / 1;
+    margin-top: rem(200);
+  }
+}

@@ -1,0 +1,21 @@
+.m-episode-card-container{
+  display: flex;
+  overflow: auto;
+  padding: rem(20) rem(40) rem(32) rem(40);
+  column-gap: rem(15);
+
+  @media (min-width: rem(1024, 'em')) {
+    margin: 0 auto;
+    grid-area: 3 / 1;
+    align-self: end;
+    padding-top: rem(50);
+    column-gap: rem(32);
+  }
+
+  @media (min-width: rem(1440, 'em')) {
+    grid-area: 1 / 1;
+    padding-top: 0;
+    margin-top: rem(275);
+    padding-bottom: rem(76);
+  }
+}
