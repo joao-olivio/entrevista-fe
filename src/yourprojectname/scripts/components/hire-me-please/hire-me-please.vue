@@ -2,7 +2,7 @@
   <div class="hire-me-please" ref="hire">
     <form>
       <label for="message">
-        Why do you want to get hired?
+        Why do you want to get hired
       </label>
       <input
         v-model="message"
