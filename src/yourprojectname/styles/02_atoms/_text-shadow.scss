@@ -1,0 +1,29 @@
+.v-podcast-template {
+  .text-shadow {
+    font-weight: 800;
+    font-size: clamp(74px, 14vw, 200px);
+    color: #F0F0F0;
+    position: absolute;
+    white-space: nowrap;
+    right: 10px;
+    top: 0;
+    z-index: 3;
+    letter-spacing: -3.7px;
+
+    @media (min-width: 768px) {
+      left: 0;
+      transform: translateY(-30%);
+    }
+
+    @media (min-width: 1440px) {
+      left: 6%;
+      top: 15%;
+      letter-spacing: -10px;
+    }
+
+    @media (min-width: 2056px) {
+      left: 19.2%;
+    }
+  }
+
+}
