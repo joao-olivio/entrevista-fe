@@ -1,10 +1,19 @@
 import Vue from "vue";
-
+import store from "./store.js";
 // Import Components
-import HireMePlease from "./components/hire-me-please/hire-me-please.vue";
+import Duration from "./components/02_molecules/duration/duration.vue";
+import NavigationMenu from "./components/02_molecules/navigation-menu/navigation-menu.vue";
+import CardsContainer from "./components/03_organisms/cards-container/cards-container.vue";
+
+
 
 // Vue Declaration for Components
-Vue.component(HireMePlease.name, HireMePlease);
+
+Vue.component(CardsContainer.name, CardsContainer);
+
+Vue.component(Duration.name, Duration);
+
+Vue.component(NavigationMenu.name, NavigationMenu);
 
 // Import Directives
 import { backgroundDirective, ellipsis } from "./directives";
@@ -14,6 +23,7 @@ Vue.directive(ellipsis.name, ellipsis);
 Vue.directive(backgroundDirective.name, backgroundDirective);
 
 new Vue({
+  store,
   // eslint-disable-line no-new
   el: "#main-container"
 });

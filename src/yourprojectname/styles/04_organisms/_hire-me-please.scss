@@ -37,3 +37,22 @@
     height: 40px;
   }
 }
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+@for $i from 1 through 4 {
+  article.card:nth-child(#{$i}) {
+    animation: .25s fade calc((0.25s * #{$i}) - 0.25s) linear forwards;
+  }
+}

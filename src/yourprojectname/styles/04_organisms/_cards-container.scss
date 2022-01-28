@@ -1,0 +1,36 @@
+.v-podcast-template {
+  .cards-container {
+    padding: 20px 40px 10px;
+    margin: 0 auto 22px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    overflow-x: scroll;
+    place-items: center;
+    max-width: 1472px;
+
+    @media (min-width: 900px) {
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+  
+      &::-webkit-scrollbar {
+        background-color: transparent;
+        height: 10px;
+      }
+  
+      &:hover::-webkit-scrollbar-thumb {
+        background: #999;
+        height: 3px;
+        border-radius: 40px;
+      }
+    }
+    
+    @media (min-width: 1440px) {
+      padding: 32px 148px 76px;
+      gap: 32px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+  }
+}

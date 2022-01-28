@@ -1,0 +1,43 @@
+.v-podcast-template {
+  nav {
+    display: none;
+    gap: 15px;
+
+    .navlink {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 20px;
+      display: grid;
+      gap: 11px;
+      letter-spacing: 2.31px;
+      grid-template-columns: 1fr;
+
+      &:hover {
+        color: initial;
+        filter: brightness(.8);
+      }
+
+      &::after {
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: #111111;
+        transform: scaleX(0);
+        transition: .3s;
+      }
+
+      &:hover::after, &[aria-selected="true"]::after {
+        transform: scaleX(1)
+      }
+    }
+
+    @media (min-width: 1440px) {
+      display: inline-flex;
+      margin: auto;
+      position: relative;
+      z-index: 5;
+    }
+
+  }
+}

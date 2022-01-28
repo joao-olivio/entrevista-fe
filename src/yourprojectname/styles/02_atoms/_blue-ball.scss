@@ -1,0 +1,18 @@
+.v-podcast-template {
+  .blue-ball {
+    display: none;
+    
+    @media (min-width: 1440px) {
+        height: 554px;
+        width: 554px;
+        display: inline-block;
+        background-color: #5DD1FF;
+        position: absolute;
+        z-index: 4;
+        border-radius: 50%;
+        top: 5.5%;
+        left: 50%;
+        transform: translateX(-120%);
+    }
+  }
+} 

@@ -41,3 +41,28 @@ a {
     color: $success-green;
   }
 }
+
+.heading1 {
+  font-weight: 800;
+  font-size: clamp(40px, 5.6vw, 80px);
+  line-height: clamp(36px, 7.6vw, 109px);
+}
+
+.heading2 {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.heading3 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.heading4 {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 13px;
+  color: #777;
+}

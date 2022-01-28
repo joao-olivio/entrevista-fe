@@ -1,0 +1,14 @@
+<section class="v-podcast-template">
+  <header>
+    {{> '@heading-1'}}
+    {{> '@navigation'}}
+    {{> '@text-shadow'}}
+  </header>
+  <cards-container class="cards-container" cards-info='[{{#each card}}["{{heading2}}", "{{heading3}}", "{{heading4}}", "{{duration}}", "{{tag}}"],{{/each}}]'>
+    {{> '@play'}}
+  </cards-container>
+  <footer>
+    <a href="{{ctaHref}}" class="cta-link">{{> '@cta'}}</a>
+  </footer>
+  {{render '@blue-ball'}}
+</section>
