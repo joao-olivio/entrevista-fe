@@ -1,0 +1,34 @@
+.episodes {
+  padding: 60px 0px;
+  background-color: #f9f9f9;
+
+  &-button {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-container {
+    margin-left: 40px;
+  }
+
+  @media (min-width: 1439px) {
+    padding: 200px 0px;
+
+    &-title {
+      margin-bottom: 80px;
+    }
+
+    &-container {
+      margin-left: 0px;
+    }
+
+    &-button {
+      margin-top: 60px;
+    }
+
+    p.text-shadown {
+      top: -50px;
+      left: -76%;
+    }
+  }
+}

@@ -1,4 +1,0 @@
-{
-	"error": false,
-	"message": "This is an mocked API response emulating the real implementation. Mocks can be found at /fractal/components/mocks/ - fetching at '/api/sendMessage/' in this case"
-}
