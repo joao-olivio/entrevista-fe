@@ -1,0 +1,185 @@
+.team {
+  background-color: var(--lightGrey);
+  padding: 60px 0px;
+  &-container {
+    width: 80%;
+    margin: auto;
+    position: relative;
+  }
+
+  .title-section {
+    padding-top: 60px;
+    margin-left: 7%;
+    margin-bottom: 30px;
+    p.title {
+      width: 80%;
+      margin-left: 9%;
+      line-height: 58px;
+      &::before {
+        display: none;
+      }
+    }
+  }
+  p.text-shadown {
+    white-space: break-spaces;
+    left: 44%;
+    color: #fff;
+    opacity: 0.5;
+  }
+
+  &-paragraph {
+    color: var(--black);
+    font-size: 18px;
+    line-height: 30px;
+    position: relative;
+    margin-left: 15%;
+    display: none;
+  }
+  &-image {
+    position: relative;
+    z-index: 2;
+  }
+  &-person {
+    background: url(../../../assets/images/team/Oval-2.png) no-repeat center
+      center;
+    z-index: 0;
+    position: absolute;
+    width: 510px;
+    height: 342px;
+    bottom: -15%;
+    left: -5%;
+    display: flex;
+    align-items: center;
+    p {
+      font-size: 90px;
+      position: relative;
+      line-height: 72px;
+      font-weight: var(--blackWeight);
+      letter-spacing: -1.5px;
+      width: 380px;
+      margin-left: 14%;
+      span {
+        font-size: 18px;
+        line-height: 0;
+        font-weight: 400;
+        white-space: nowrap;
+        width: 100%;
+        display: block;
+        top: -27px;
+        position: relative;
+      }
+      &::before {
+        content: '';
+        background-color: #5cd0fe;
+        position: absolute;
+        top: -7px;
+        height: 2px;
+        width: 84%;
+        left: 0;
+        z-index: -1;
+      }
+    }
+  }
+  @media (min-width: 421px) and (max-width: 1400px) {
+    .col-1 {
+      display: none;
+    }
+  }
+  @media (min-width: 421px) {
+    height: 865px;
+    &-container {
+      width: 1326px;
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      margin-top: 50px;
+    }
+    .col-2,
+    .col-1 {
+      position: absolute;
+    }
+    .col-2 {
+      left: 0%;
+    }
+    .col-1 {
+      right: 0%;
+    }
+    &-column {
+      img {
+        margin-right: auto;
+      }
+    }
+    &-paragraph {
+      width: 377px;
+      display: block;
+    }
+    &-text {
+      background: url('../../../assets/images/team/Oval.png') no-repeat center
+        center;
+      padding: 129px 128px;
+      padding-bottom: 122px;
+      background-size: cover;
+      position: relative;
+      left: -25%;
+    }
+    p.text-shadown {
+      left: 6%;
+      top: -3%;
+    }
+    &-image {
+      &::before {
+        content: url(../../../assets/images/team/row.png);
+        position: absolute;
+        top: 14%;
+        right: -42%;
+      }
+      &::after {
+        content: url(../../../assets/images/team/row.png);
+        position: absolute;
+        bottom: -10%;
+        right: -9%;
+      }
+    }
+  }
+  @media (max-width: 420px) {
+    position: relative;
+    padding-bottom: 84px;
+    &::before {
+      content: url('../../../assets/images/team/Oval.png');
+      position: absolute;
+      height: 54%;
+      width: 2%;
+      top: -34%;
+      left: -6%;
+      opacity: 1;
+      transform: matrix(0.94, 0.34, -0.34, 0.94, 0, 0);
+    }
+    .title-section {
+      padding-top: 0px;
+      margin-left: -16px;
+    }
+    &-person {
+      width: auto;
+      height: 181px;
+      bottom: -15%;
+      left: -9%;
+      display: flex;
+      align-items: center;
+      background-size: contain;
+      p {
+        font-size: 40px;
+        line-height: 38px;
+        width: 50%;
+        &::before {
+          top: -1px;
+        }
+        span {
+          top: -9px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+input {
+  height: 60px;
+  background: var(--white);
+  border: 0;
+  padding: 0px 10px;
+  color: #999999;
+  font-size: 15px;
+  &::placeholder,
+  &:-ms-input-placeholder,
+  &-moz-placeholder,
+  &--webkit-input-placeholder {
+    color: #999999;
+    opacity: 1;
+  }
+
+  @media (min-width: 1440px) {
+    flex-wrap: nowrap;
+  }
+}

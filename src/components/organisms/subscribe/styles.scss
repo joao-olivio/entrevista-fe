@@ -1,0 +1,50 @@
+.subscribe {
+  background-color: var(--black);
+  padding: 100px 0px;
+  &-container {
+    margin: auto;
+    width: 80%;
+  }
+  &-paragraph {
+    margin: auto;
+    margin-top: 52px;
+    color: #cccccc;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  p.text-shadown {
+    opacity: 0.1;
+    transform: translate(-9%, -76%);
+  }
+  .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 80px 15px 0px 15px;
+    input {
+      width: 100%;
+    }
+  }
+  @media (min-width: 1440px) {
+    p.text-shadown {
+      top: 63px;
+      left: -52%;
+    }
+    &-paragraph {
+      width: 633px;
+      text-align: center;
+    }
+    &-container {
+      width: auto;
+      margin-top: 100px;
+    }
+    .input-group {
+      input {
+        width: 200px;
+      }
+      .button {
+        width: 130px;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.logo {
+  position: relative;
+  z-index: 1;
+
+  &-imagem {
+    position: relative;
+    width: fit-content;
+    margin: 0px auto;
+    padding-bottom: 15px;
+    &::before {
+      content: '';
+      background-color: #5cd0fe;
+      position: absolute;
+      bottom: 4px;
+      height: 4px;
+      width: 80%;
+      margin: 0px 10%;
+    }
+    &.dark {
+      svg {
+        width: 190px;
+        height: 34px;
+      }
+    }
+  }
+
+  @media (min-width: 1439px) {
+    &-imagem {
+      margin-bottom: 8px;
+      &.dark {
+        svg {
+          width: 364px;
+          height: 74px;
+        }
+      }
+    }
+  }
+}

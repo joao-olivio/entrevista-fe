@@ -1,0 +1,72 @@
+.banner {
+  min-height: 467px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f9f9f9;
+  position: relative;
+
+  &::after {
+    content: url('../../../assets/images/banner/Oval.png');
+    position: absolute;
+    bottom: -38%;
+    right: -10%;
+    width: 28%;
+  }
+
+  &::before {
+    content: url('../../../assets/images/banner/rows.png');
+    position: absolute;
+    bottom: 15%;
+    left: -11%;
+    opacity: 0;
+  }
+
+  &-container {
+    position: relative;
+    a {
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &-mouse {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+  }
+
+  @media (max-width: 1440px) {
+    p.text-shadown {
+      transform: translate(-9%, -115%);
+    }
+  }
+
+  @media (min-width: 1441px) {
+    min-height: 1080px;
+    background: url(../../../assets/images/banner/banner.png) #f9f9f9 no-repeat
+      center center;
+    &::after {
+      bottom: 65px;
+      right: -16%;
+      width: auto;
+    }
+
+    &::before {
+      opacity: 1;
+    }
+
+    &-mouse {
+      opacity: 1;
+    }
+
+    p.text-shadown {
+      top: -44px;
+      left: -52%;
+    }
+  }
+}

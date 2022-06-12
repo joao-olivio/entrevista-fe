@@ -1,0 +1,27 @@
+p {
+  &.text-shadown {
+    font-size: 80px;
+    font-weight: 900;
+    position: absolute;
+    white-space: nowrap;
+    letter-spacing: -4px;
+    color: var(--lightGrey);
+    &.lightGrey {
+      color: var(--lightGrey);
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &.text-shadown {
+      letter-spacing: -10px;
+      font-size: 200px;
+      top: -49px;
+      left: -76%;
+    }
+  }
+  @media (max-width: 1439px) {
+    &.text-shadown {
+      transform: translate(-43%, -103%);
+    }
+  }
+}
